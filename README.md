@@ -10,6 +10,11 @@
 
 ## Installation
 
+### Cocoapods
+```
+pod 'CoreUIKit', '0.1.0'
+```
+
 ### Swift package manager
 ```
 dependencies: [
