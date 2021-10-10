@@ -8,7 +8,8 @@
 
 
 jazzy \
-  --author_url: https://github.com/0vertex/ \
-  --author: Manish \
-  --github_url: https://github.com/0vertex/CoreUIKit \
-  --theme: fullwidth \
+--author_url: "https://github.com/0vertex/" \
+--author: "Manish" \
+--github_url: "https://github.com/0vertex/CoreUIKit" \
+--theme: fullwidth \
+--output: "../CoreUIKit" \
