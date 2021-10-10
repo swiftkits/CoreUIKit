@@ -16,4 +16,4 @@ jobs:
     - name: Build for iOS
       run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme CoreUIKit -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
     - name: Run iOS tests
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme CoreUIKit -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme CoreUIKitTests -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
