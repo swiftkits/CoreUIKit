@@ -1,4 +1,4 @@
-name: Pull request on main branch
+name: Build & Test CI
 
 on:
   push:
