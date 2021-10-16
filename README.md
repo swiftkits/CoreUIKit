@@ -75,6 +75,7 @@ Following are the useful links for learning about autolayout.
     - [UILayoutGuide](https://developer.apple.com/documentation/uikit/uilayoutguide)
     - [Content hugging and Content compression resistance priorities](https://abhimuralidharan.medium.com/ios-content-hugging-and-content-compression-resistance-priorities-476fb5828ef)
     - [UIStackView](https://developer.apple.com/documentation/uikit/view_layout/)
+    - [The Adaptive Model](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/TheAdaptiveModel.html)
 - Debug
     - [Debugging Tricks and Tips](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/DebuggingTricksandTips.html)
     - [Understangin Issues](https://www.rightpoint.com/rplabs/2019/06/wtf-auto-layout-for-ios-in-swift/)
