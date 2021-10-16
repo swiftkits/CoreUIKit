@@ -66,14 +66,4 @@ extension TestBaseCollectionView {
         XCTAssertTrue(_dequeuedCell!.isKind(of: UICollectionViewCell.self))
     }
     
-    func test_BaseTableView_cellDequeue_failed() {
-        // Don't register cell
-        
-        // Dequeu cell
-        let _dequeuedCell = self.sut.dequeue(UICollectionViewCell.self, for: self.indexPath)
-        
-        XCTAssertNil(_dequeuedCell)
-        XCTAssertFalse(_dequeuedCell?.isKind(of: UICollectionViewCell.self) ?? false)
-    }
-    
 }
