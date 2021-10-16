@@ -15,14 +15,14 @@ public extension UIEdgeInsets {
     ///   - left: value for left edge
     ///   - bottom: value for bottom edge
     ///   - right: value for right edge
-    init(top: CGFloat = 0, left: CGFloat = 0,
-         bottom: CGFloat = 0, right: CGFloat = 0) {
+    init(top: CGFloat? = 0, left: CGFloat? = 0,
+         bottom: CGFloat? = 0, right: CGFloat? = 0) {
         self.init()
         
-        self.top = top
-        self.left = left
-        self.bottom = bottom
-        self.right = right
+        self.top = top ?? 0
+        self.left = left ?? 0
+        self.bottom = bottom ?? 0
+        self.right = right ?? 0
     }
     
     /// Initializes `UIEdgeInsets` with grouping top,bottom and left,right edges in params
