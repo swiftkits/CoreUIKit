@@ -10,6 +10,8 @@ import UIKit
 /// A view replacing direct use of `UITableView` with added features.
 public class BaseTableView: UITableView {
     
+    /// Inits `BaseTableView` with provided parameters.
+    /// - Parameter pullToRefresh: defines the need for pull to refresh feature on `BaseTableView`
     public init(with pullToRefresh: Bool = false) {
         super.init(frame: .zero, style: .plain)
         

@@ -28,6 +28,13 @@ public extension UIView {
         return self
     }
     
+    /// Sets `accessibilityIdentifier` on current view
+    @discardableResult
+    func set(identifier: String) -> Self {
+        self.accessibilityIdentifier = identifier
+        
+        return self
+    }
 }
 
 // MARK: - Constraints
@@ -41,74 +48,82 @@ public extension UIView {
     @discardableResult
     func allAnchorsSame(on parentView: UIView,
                         margin: UIEdgeInsets = .zero) -> Self {
-        
-        NSLayoutConstraint.activate([
-            self.leadingAnchor.constraint(equalTo: parentView.leadingAnchor, constant: margin.left),
-            self.trailingAnchor.constraint(equalTo: parentView.trailingAnchor, constant: margin.right),
-            self.topAnchor.constraint(equalTo: parentView.topAnchor, constant: margin.top),
-            self.bottomAnchor.constraint(equalTo: parentView.bottomAnchor, constant: margin.bottom)
-        ])
-        
+        self.leading(with: parentView.leadingAnchor)
+            .trailing(with: parentView.trailingAnchor)
+            .top(with: parentView.topAnchor)
+            .bottom(with: parentView.bottomAnchor)
+
         return self
     }
     
     /// Sets leading anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as leading anchor on current view
+    ///   - relation: relation between current view and relative contraint
     ///   - margin: leading margin / left margin from current view
     /// - Returns: current view
     @discardableResult
     func leading(with anchor: NSLayoutXAxisAnchor,
+                 relation: ConstraintRelation = .equal,
                  margin: CGFloat = .zero) -> Self {
-        self.leadingAnchor
-            .constraint(equalTo: anchor,
-                        constant: margin).isActive = true
-        
+        let leadingAnchor = self.leadingAnchor.constraint(with: relation, on: anchor, margin: margin)
+        self.setConstraintIdentifier(for: "leading", for: leadingAnchor)
+
+        leadingAnchor.isActive = true
+
         return self
     }
     
     /// Sets trailing anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as trailing anchor on current view
+    ///   - relation: relation between current view and relative contraint
     ///   - margin: trailing margin / right margin from current view
     /// - Returns: current view
     @discardableResult
     func trailing(with anchor: NSLayoutXAxisAnchor,
+                  relation: ConstraintRelation = .equal,
                   margin: CGFloat = .zero) -> Self {
-        self.trailingAnchor
-            .constraint(equalTo: anchor,
-                        constant: -margin).isActive = true
+        let trailingAnchor = self.trailingAnchor.constraint(with: relation, on: anchor, margin: -margin)
+        self.setConstraintIdentifier(for: "trailing", for: trailingAnchor)
         
+        trailingAnchor.isActive = true
+
         return self
     }
     
     /// Sets top anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as top anchor on current view
+    ///   - relation: relation between current view and relative contraint   
     ///   - margin: top margin from current view
     /// - Returns: current view
     @discardableResult
     func top(with anchor: NSLayoutYAxisAnchor,
+             relation: ConstraintRelation = .equal,
              margin: CGFloat = .zero) -> Self {
-        self.topAnchor
-            .constraint(equalTo: anchor,
-                        constant: margin).isActive = true
-        
+        let topAnchor = self.topAnchor.constraint(with: relation, on: anchor, margin: margin)
+        self.setConstraintIdentifier(for: "top", for: topAnchor)
+
+        topAnchor.isActive = true
+
         return self
     }
     
     /// Sets bottom anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as bottom anchor on current view
+    ///   - relation: relation between current view and relative contraint
     ///   - margin: bottom margin from current view
     /// - Returns: current view
     @discardableResult
     func bottom(with anchor: NSLayoutYAxisAnchor,
+                relation: ConstraintRelation = .equal,
                 margin: CGFloat = .zero) -> Self {
-        self.bottomAnchor
-            .constraint(equalTo: anchor,
-                        constant: -margin).isActive = true
+        let bottomAnchor = self.bottomAnchor.constraint(with: relation, on: anchor, margin: margin)
+        self.setConstraintIdentifier(for: "bottom", for: bottomAnchor)
         
+        bottomAnchor.isActive = true
         return self
     }
     
@@ -122,15 +137,17 @@ public extension UIView {
               height: CGFloat? = nil) -> Self {
         
         if let safeWidth = width {
-            self.widthAnchor
-                .constraint(equalToConstant: safeWidth)
-                .isActive = true
+            let widthAnchor = self.widthAnchor.constraint(equalToConstant: safeWidth)
+            self.setConstraintIdentifier(for: "width", for: widthAnchor)
+            
+            widthAnchor.isActive = true
         }
         
         if let safeHeight = height {
-            self.heightAnchor
-                .constraint(equalToConstant: safeHeight)
-                .isActive = true
+            let heightAnchor = self.heightAnchor.constraint(equalToConstant: safeHeight)
+            self.setConstraintIdentifier(for: "height", for: heightAnchor)
+            
+            heightAnchor.isActive = true
         }
         
         return self
@@ -144,10 +161,11 @@ public extension UIView {
     @discardableResult
     func centerX(with anchor: NSLayoutXAxisAnchor,
                  margin: CGFloat = .zero) -> Self {
-        self.centerXAnchor
-            .constraint(equalTo: anchor,
-                        constant: margin).isActive = true
-        
+        let centerXAnchor = self.centerXAnchor.constraint(equalTo: anchor, constant: margin)
+        self.setConstraintIdentifier(for: "centerX", for: centerXAnchor)
+
+        centerXAnchor.isActive = true
+
         return self
     }
     
@@ -159,10 +177,11 @@ public extension UIView {
     @discardableResult
     func centerY(with anchor: NSLayoutYAxisAnchor,
                  margin: CGFloat = .zero) -> Self {
-        self.centerYAnchor
-            .constraint(equalTo: anchor,
-                        constant: margin).isActive = true
-        
+        let centerYAnchor = self.centerYAnchor.constraint(equalTo: anchor, constant: margin)
+        self.setConstraintIdentifier(for: "centerY", for: centerYAnchor)
+
+        centerYAnchor.isActive = true
+
         return self
     }
     
@@ -179,6 +198,18 @@ public extension UIView {
             .with(width: size.width, height: size.height)
         
         return self
+    }
+    
+}
+
+extension UIView {
+    
+    func setConstraintIdentifier(for anchorType: String, for constraint: NSLayoutConstraint) {
+        guard let safeIdentifier = self.accessibilityIdentifier else { return }
+        
+        if !safeIdentifier.isEmpty && !anchorType.isEmpty {
+            constraint.identifier = "\(safeIdentifier)_\(anchorType)Anchor"
+        }
     }
     
 }
