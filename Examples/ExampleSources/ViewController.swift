@@ -17,22 +17,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
+        self.view.set(identifier: "self.view(rootViewOfVC)")
         
         self.redView.backgroundColor = .red
         self.redView
+            .set(identifier: "redView")
             .add(to: self.view)
             .leading(with: self.view.leadingAnchor)
             .top(with: self.view.safeAreaLayoutGuide.topAnchor)
-            .with(width: 200, height: 150)
+            .with(width: 150, height: 150)
         
         self.yellowView.backgroundColor = .yellow
         self.yellowView
             .set(identifier: "yellowView")
             .add(to: self.view)
             .leading(with: self.redView.trailingAnchor)
+            .trailing(with: self.view.trailingAnchor)
             .top(with: self.view.safeAreaLayoutGuide.topAnchor)
-            .bottom(with: self.view.bottomAnchor)
-            .with(width: 200, height: 150)
+            .with(height: 150)
     }
 
 

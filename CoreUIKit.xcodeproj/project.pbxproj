@@ -16,6 +16,9 @@
 		139E092C26E13ECE00A72A24 /* BaseInitializableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E092B26E13ECE00A72A24 /* BaseInitializableView.swift */; };
 		139E092E26E1404500A72A24 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E092D26E1404500A72A24 /* BaseTableView.swift */; };
 		139E093026E1422F00A72A24 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E092F26E1422F00A72A24 /* BaseTableViewCell.swift */; };
+		13ECCC03271A8024000DAD01 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */; };
+		13ECCC05271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC04271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift */; };
+		13ECCC07271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC06271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift */; };
 		13ED670B26F713B6008F2DE4 /* TestBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,9 @@
 		139E092B26E13ECE00A72A24 /* BaseInitializableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInitializableView.swift; sourceTree = "<group>"; };
 		139E092D26E1404500A72A24 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
 		139E092F26E1422F00A72A24 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintRelation.swift; sourceTree = "<group>"; };
+		13ECCC04271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutXAxisAnchor+ConstraintRelation.swift"; sourceTree = "<group>"; };
+		13ECCC06271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutYAxisAnchor+ConstraintRelation.swift"; sourceTree = "<group>"; };
 		13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaseTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				134E17A526E29C320057F70C /* UIVIew+Constraints.swift */,
+				13ECCC04271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift */,
+				13ECCC06271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -102,10 +110,11 @@
 		139E08FF26E13BB900A72A24 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				134E17A726E29C4A0057F70C /* SupportingFiles */,
+				13ECCC01271A7FF1000DAD01 /* Core */,
 				134E17A426E29C1B0057F70C /* Extensions */,
 				139E093126E142B600A72A24 /* BaseView */,
 				139E093226E142CA00A72A24 /* BaseTableView */,
+				134E17A726E29C4A0057F70C /* SupportingFiles */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -137,6 +146,14 @@
 				139E092F26E1422F00A72A24 /* BaseTableViewCell.swift */,
 			);
 			path = BaseTableView;
+			sourceTree = "<group>";
+		};
+		13ECCC01271A7FF1000DAD01 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +269,9 @@
 				139E092E26E1404500A72A24 /* BaseTableView.swift in Sources */,
 				139E092826E13CE600A72A24 /* BaseView.swift in Sources */,
 				139E092C26E13ECE00A72A24 /* BaseInitializableView.swift in Sources */,
+				13ECCC07271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift in Sources */,
+				13ECCC03271A8024000DAD01 /* ConstraintRelation.swift in Sources */,
+				13ECCC05271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift in Sources */,
 				139E093026E1422F00A72A24 /* BaseTableViewCell.swift in Sources */,
 				139E092A26E13CF200A72A24 /* BaseViewModel.swift in Sources */,
 				134E17A626E29C320057F70C /* UIVIew+Constraints.swift in Sources */,
@@ -457,7 +477,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoreUIKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,7 +497,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoreUIKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -28,6 +28,8 @@ public extension UIView {
         return self
     }
     
+    /// Sets `accessibilityIdentifier` on current view
+    @discardableResult
     func set(identifier: String) -> Self {
         self.accessibilityIdentifier = identifier
         
@@ -61,8 +63,9 @@ public extension UIView {
     /// - Returns: current view
     @discardableResult
     func leading(with anchor: NSLayoutXAxisAnchor,
+                 relation: ConstraintRelation = .equal,
                  margin: CGFloat = .zero) -> Self {
-        let leadingAnchor = self.leadingAnchor.constraint(equalTo: anchor, constant: margin)
+        let leadingAnchor = self.leadingAnchor.constraint(with: relation, on: anchor, margin: margin)
         self.setConstraintIdentifier(for: "leading", for: leadingAnchor)
 
         leadingAnchor.isActive = true
@@ -77,8 +80,9 @@ public extension UIView {
     /// - Returns: current view
     @discardableResult
     func trailing(with anchor: NSLayoutXAxisAnchor,
+                  relation: ConstraintRelation = .equal,
                   margin: CGFloat = .zero) -> Self {
-        let trailingAnchor = self.trailingAnchor.constraint(equalTo: anchor, constant: -margin)
+        let trailingAnchor = self.trailingAnchor.constraint(with: relation, on: anchor, margin: -margin)
         self.setConstraintIdentifier(for: "trailing", for: trailingAnchor)
         
         trailingAnchor.isActive = true
@@ -93,8 +97,9 @@ public extension UIView {
     /// - Returns: current view
     @discardableResult
     func top(with anchor: NSLayoutYAxisAnchor,
+             relation: ConstraintRelation = .equal,
              margin: CGFloat = .zero) -> Self {
-        let topAnchor = self.topAnchor.constraint(equalTo: anchor, constant: margin)
+        let topAnchor = self.topAnchor.constraint(with: relation, on: anchor, margin: margin)
         self.setConstraintIdentifier(for: "top", for: topAnchor)
 
         topAnchor.isActive = true
@@ -109,8 +114,9 @@ public extension UIView {
     /// - Returns: current view
     @discardableResult
     func bottom(with anchor: NSLayoutYAxisAnchor,
+                relation: ConstraintRelation = .equal,
                 margin: CGFloat = .zero) -> Self {
-        let bottomAnchor = self.bottomAnchor.constraint(equalTo: anchor, constant: -margin)
+        let bottomAnchor = self.bottomAnchor.constraint(with: relation, on: anchor, margin: margin)
         self.setConstraintIdentifier(for: "bottom", for: bottomAnchor)
         
         bottomAnchor.isActive = true
