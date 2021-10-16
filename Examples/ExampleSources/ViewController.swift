@@ -57,15 +57,17 @@ private extension ViewController {
     
     func setupUserNameViews() {
         self.userNameLabel
+            .set(identifier: "userNameLabel")
             .add(to: self.view)
             .leading(with: self.container.leadingAnchor)
             .trailing(with: self.container.trailingAnchor)
             .top(with: self.container.topAnchor)
         
         self.userNameTextField
+            .set(identifier: "userNameTextField")
             .add(to: self.view)
-            .leading(with: self.container.leadingAnchor)
-            .trailing(with: self.container.trailingAnchor)
+            .leading(with: self.userNameLabel.leadingAnchor)
+            .trailing(with: self.userNameLabel.trailingAnchor)
             .top(with: self.userNameLabel.bottomAnchor, margin: 5)
             .with(height: 50)
         self.userNameTextField.backgroundColor = UIColor.lightGray
@@ -74,15 +76,17 @@ private extension ViewController {
     
     func setupPasswordViews() {
         self.passwordLabel
+            .set(identifier: "passwordLabel")
             .add(to: self.view)
-            .leading(with: self.container.leadingAnchor)
-            .trailing(with: self.container.trailingAnchor)
+            .leading(with: self.userNameLabel.leadingAnchor)
+            .trailing(with: self.userNameLabel.trailingAnchor)
             .top(with: self.userNameTextField.bottomAnchor, margin: 25)
         
         self.passwordTextField
+            .set(identifier: "passwordTextField")
             .add(to: self.view)
-            .leading(with: self.container.leadingAnchor)
-            .trailing(with: self.container.trailingAnchor)
+            .leading(with: self.userNameLabel.leadingAnchor)
+            .trailing(with: self.userNameLabel.trailingAnchor)
             .top(with: self.passwordLabel.bottomAnchor, margin: 5)
             .with(height: 50)
         self.passwordTextField.backgroundColor = UIColor.lightGray
