@@ -11,18 +11,18 @@
 ## Installation
 
 ### Cocoapods
-```
+```ruby
 pod 'CoreUIKit', '0.1.0'
 ```
 
 ### Swift package manager
-```
+```swift
 dependencies: [
     .package(url: "https://github.com/0vertex/CoreUIKit.git", .upToNextMajor(from: "0.1.0"))
 ]
 ```
 
 ### Carthage
-```
+```ruby
 github "CoreUIKit" ~> 0.1.0
 ```
