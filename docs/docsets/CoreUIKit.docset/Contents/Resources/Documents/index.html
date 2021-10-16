@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          CoreUIKit 0.1.0 Docs
+          CoreUIKit 0.2.0 Docs
         </a>
          (97% documented)
       </p>
@@ -108,25 +108,100 @@
             
             <h1 id='coreuikit' class='heading'>CoreUIKit</h1>
 
-<p><img src="https://img.shields.io/github/license/0vertex/CoreUIKit?style=flat-square" alt="MIT license">
+<p><img src="https://img.shields.io/github/license/0vertex/CoreUIKit" alt="MIT license">
 <img src="https://github.com/0vertex/CoreUIKit/actions/workflows/build.yml/badge.svg" alt="CoreUIKit CI workflow">
-<img src="https://img.shields.io/cocoapods/v/CoreUIKit?style=flat-square" alt="Pod">
+<img src="https://img.shields.io/cocoapods/v/CoreUIKit" alt="Pod">
 <img src="https://img.shields.io/badge/Carthage-Compatible-green" alt="Carthage">
 <img src="https://img.shields.io/badge/SPM-Compatible-green" alt="SPM"></p>
 
 <p><code>CoreUIKit</code> provides functional and easy to use extensions on top of <code>UIKit</code>.</p>
+
+<ul>
+<li><a href="#installation">Installation Guide</a>
+
+<ul>
+<li><a href="#cocoapods">Install using Cocoapods</a></li>
+<li><a href="#swift-package-manager">Install using Swift package manager</a></li>
+<li><a href="#carthage">Install using Carthage</a></li>
+</ul></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#learn">Learn</a></li>
+</ul>
 <h2 id='installation' class='heading'>Installation</h2>
 <h3 id='cocoapods' class='heading'>Cocoapods</h3>
-<pre class="highlight plaintext"><code>pod 'CoreUIKit', '0.1.0'
+
+<p>CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. <a href="https://cocoapods.org/">Learn More!</a></p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'CoreUIKit'</span><span class="p">,</span> <span class="s1">'0.2.0'</span>
 </code></pre>
 <h3 id='swift-package-manager' class='heading'>Swift package manager</h3>
-<pre class="highlight plaintext"><code>dependencies: [
-    .package(url: "https://github.com/0vertex/CoreUIKit.git", .upToNextMajor(from: "0.1.0"))
-]
+
+<p>The Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. <a href="https://swift.org/package-manager/">Learn More!</a></p>
+<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/0vertex/CoreUIKit.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"0.2.0"</span><span class="p">))</span>
+<span class="p">]</span>
 </code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
-<pre class="highlight plaintext"><code>github "CoreUIKit" ~&gt; 0.1.0
+
+<p>A simple, decentralized dependency manager for Cocoa. <a href="https://github.com/Carthage/Carthage">Learn More!</a></p>
+<pre class="highlight ruby"><code><span class="n">github</span> <span class="s2">"CoreUIKit"</span> <span class="o">~&gt;</span> <span class="mf">0.2</span><span class="o">.</span><span class="mi">0</span>
 </code></pre>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<ul>
+<li><a href="https://0vertex.github.io/CoreUIKit/">CoreUIKit Code level doc</a></li>
+</ul>
+<h2 id='examples' class='heading'>Examples</h2>
+
+<ul>
+<li><p>How to add a <code>subView</code> on a <code>parentView</code> which has <code>leading</code> <code>trailing</code> <code>top</code> and <code>bottom</code> anchors matching with it&rsquo;s <code>parentView</code></p>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">subView</span>
+<span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">parentView</span><span class="p">)</span>
+<span class="o">.</span><span class="nf">allAnchorsSame</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">prarentView</span><span class="p">)</span>
+</code></pre></li>
+<li><p>How to add a <code>subView</code> to a <code>parentView</code> with matching only <code>leading</code> anchor</p>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">subView</span>
+<span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">parentView</span><span class="p">)</span>
+<span class="o">.</span><span class="nf">leading</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">parentView</span><span class="o">.</span><span class="n">leadingAnchor</span><span class="p">)</span>
+</code></pre></li>
+<li><p>How to add a <code>subView</code> to a <code>parentView</code> on <code>top</code> and <code>leading</code> with margin/space of 10 units and <code>width</code> and <code>height</code> of 120 respectively.</p>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">subView</span>
+<span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">parentView</span><span class="p">)</span>
+<span class="o">.</span><span class="nf">top</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">parentView</span><span class="o">.</span><span class="n">topAnchor</span><span class="p">)</span>
+<span class="o">.</span><span class="nf">leading</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">parentView</span><span class="o">.</span><span class="n">leadingAnchor</span><span class="p">)</span>
+<span class="o">.</span><span class="nf">with</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">120</span><span class="p">)</span>
+</code></pre></li>
+<li><p>To learn more about avilable extensions, <a href="https://0vertex.github.io/CoreUIKit/Extensions/UIView.html">check this out</a></p></li>
+</ul>
+<h2 id='learn' class='heading'>Learn</h2>
+
+<p>Following are the useful links for learning about autolayout.</p>
+
+<ul>
+<li>Learn AutoLayout
+
+<ul>
+<li><a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html">Understanding Auto Layout</a></li>
+<li><a href="https://www.avanderlee.com/swift/auto-layout-programmatically/">Writing constraints programmatically</a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uilayoutguide">UILayoutGuide</a></li>
+<li><a href="https://abhimuralidharan.medium.com/ios-content-hugging-and-content-compression-resistance-priorities-476fb5828ef">Content hugging and Content compression resistance priorities</a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/view_layout/">UIStackView</a></li>
+<li><a href="https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/TheAdaptiveModel.html">The Adaptive Model</a></li>
+</ul></li>
+<li>Debug
+
+<ul>
+<li><a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/DebuggingTricksandTips.html">Debugging Tricks and Tips</a></li>
+<li><a href="https://www.rightpoint.com/rplabs/2019/06/wtf-auto-layout-for-ios-in-swift/">Understangin Issues</a></li>
+</ul></li>
+<li>WWDC Videos
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2015/218">Mysteries of Auto Layout, Part 1</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2015/219">Mysteries of Auto Layout, Part 2</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2018/220/">High Performance Auto Layout</a></li>
+</ul></li>
+</ul>
 
           </div>
         </section>
