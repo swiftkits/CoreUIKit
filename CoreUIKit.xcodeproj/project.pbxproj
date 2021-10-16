@@ -84,8 +84,8 @@
 		139E08F326E13BB900A72A24 = {
 			isa = PBXGroup;
 			children = (
-				139E08FF26E13BB900A72A24 /* CoreUIKit */,
-				139E090A26E13BB900A72A24 /* CoreUIKitTests */,
+				139E08FF26E13BB900A72A24 /* Sources */,
+				139E090A26E13BB900A72A24 /* Tests */,
 				139E08FE26E13BB900A72A24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,7 +99,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		139E08FF26E13BB900A72A24 /* CoreUIKit */ = {
+		139E08FF26E13BB900A72A24 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				134E17A726E29C4A0057F70C /* SupportingFiles */,
@@ -107,17 +107,17 @@
 				139E093126E142B600A72A24 /* BaseView */,
 				139E093226E142CA00A72A24 /* BaseTableView */,
 			);
-			path = CoreUIKit;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		139E090A26E13BB900A72A24 /* CoreUIKitTests */ = {
+		139E090A26E13BB900A72A24 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				139E090D26E13BB900A72A24 /* Info.plist */,
 				13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */,
 				1354C54726F7645D00C8294C /* TestUIViewConstraints.swift */,
 			);
-			path = CoreUIKitTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		139E093126E142B600A72A24 /* BaseView */ = {
@@ -409,7 +409,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CoreUIKit/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -435,7 +435,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CoreUIKit/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
