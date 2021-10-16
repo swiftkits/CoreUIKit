@@ -59,6 +59,7 @@ public extension UIView {
     /// Sets leading anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as leading anchor on current view
+    ///   - relation: relation between current view and relative contraint
     ///   - margin: leading margin / left margin from current view
     /// - Returns: current view
     @discardableResult
@@ -76,6 +77,7 @@ public extension UIView {
     /// Sets trailing anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as trailing anchor on current view
+    ///   - relation: relation between current view and relative contraint
     ///   - margin: trailing margin / right margin from current view
     /// - Returns: current view
     @discardableResult
@@ -93,6 +95,7 @@ public extension UIView {
     /// Sets top anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as top anchor on current view
+    ///   - relation: relation between current view and relative contraint   
     ///   - margin: top margin from current view
     /// - Returns: current view
     @discardableResult
@@ -110,6 +113,7 @@ public extension UIView {
     /// Sets bottom anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as bottom anchor on current view
+    ///   - relation: relation between current view and relative contraint
     ///   - margin: bottom margin from current view
     /// - Returns: current view
     @discardableResult

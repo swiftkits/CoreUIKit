@@ -10,6 +10,16 @@ import UIKit
 protocol ConstraintRelatable {
     
     associatedtype AnchorAxisType: AnyObject
+    ///
+    /// Creates constraint with given relation and margin parameters
+    ///
+    /// - Parameters:
+    ///     - with: type of relation
+    ///     - on: constraint to be cretated on relative anchor
+    ///     - margin: margin around new constraint
+    ///
+    /// - Returns: `NSLayoutConstraint` - newly generated constraint
+    ///
     func constraint(with relation: ConstraintRelation,
                     on relativeViewAnchor: AnchorAxisType,
                     margin: CGFloat) -> NSLayoutConstraint
