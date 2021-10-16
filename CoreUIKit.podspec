@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'CoreUIKit'
-  spec.version       = '0.1.0'
+  spec.version       = '0.2.0'
   spec.license       = { :type => 'MIT' }
   spec.homepage      = 'https://github.com/0vertex/CoreUIKit'
   spec.authors       = 'Manish'
