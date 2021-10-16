@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Abstract layer for creating constraints with relation using `ConstraintRelation`
 protocol ConstraintRelatable {
     
     associatedtype AnchorAxisType: AnyObject
