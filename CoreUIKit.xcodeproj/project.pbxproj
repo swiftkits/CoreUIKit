@@ -19,6 +19,7 @@
 		13ECCC03271A8024000DAD01 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */; };
 		13ECCC05271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC04271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift */; };
 		13ECCC07271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC06271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift */; };
+		13ECCC09271A8A3B000DAD01 /* ConstraintRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC08271A8A3B000DAD01 /* ConstraintRelatable.swift */; };
 		13ED670B26F713B6008F2DE4 /* TestBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintRelation.swift; sourceTree = "<group>"; };
 		13ECCC04271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutXAxisAnchor+ConstraintRelation.swift"; sourceTree = "<group>"; };
 		13ECCC06271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutYAxisAnchor+ConstraintRelation.swift"; sourceTree = "<group>"; };
+		13ECCC08271A8A3B000DAD01 /* ConstraintRelatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintRelatable.swift; sourceTree = "<group>"; };
 		13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaseTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */,
+				13ECCC08271A8A3B000DAD01 /* ConstraintRelatable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				139E092C26E13ECE00A72A24 /* BaseInitializableView.swift in Sources */,
 				13ECCC07271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift in Sources */,
 				13ECCC03271A8024000DAD01 /* ConstraintRelation.swift in Sources */,
+				13ECCC09271A8A3B000DAD01 /* ConstraintRelatable.swift in Sources */,
 				13ECCC05271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift in Sources */,
 				139E093026E1422F00A72A24 /* BaseTableViewCell.swift in Sources */,
 				139E092A26E13CF200A72A24 /* BaseViewModel.swift in Sources */,

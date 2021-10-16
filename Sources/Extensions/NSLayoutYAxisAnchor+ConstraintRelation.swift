@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension NSLayoutYAxisAnchor {
+extension NSLayoutYAxisAnchor: ConstraintRelatable {
     
     func constraint(with relation: ConstraintRelation,
                     on relativeViewAnchor: NSLayoutYAxisAnchor,
