@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ConstraintRelation Enumeration Reference</title>
+    <title>BaseCollectionViewCell Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Enum/ConstraintRelation" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/BaseCollectionViewCell" class="dashAnchor"></a>
 
-    <a title="ConstraintRelation Enumeration Reference"></a>
+    <a title="BaseCollectionViewCell Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">CoreUIKit Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      ConstraintRelation Enumeration Reference
+      BaseCollectionViewCell Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -106,15 +106,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>ConstraintRelation</h1>
+            <h1>BaseCollectionViewCell</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ConstraintRelation</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">BaseCollectionViewCell</span><span class="o">&lt;</span><span class="kt">ViewModel</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt"><a href="../Protocols/BaseView.html">BaseView</a></span> <span class="k">where</span> <span class="kt">ViewModel</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/BaseViewModel.html">BaseViewModel</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Core relation type between any two constraints</p>
+            <p>Provides core features for <code>UICollectionViewCell</code> with data model and setups</p>
 
           </div>
         </section>
@@ -126,9 +126,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CoreUIKit18ConstraintRelationO5equalyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/equal" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CoreUIKit18ConstraintRelationO5equalyA2CmF">equal</a>
+                    <a name="/s:9CoreUIKit22BaseCollectionViewCellC9viewModelxSgvp"></a>
+                    <a name="//apple_ref/swift/Property/viewModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CoreUIKit22BaseCollectionViewCellC9viewModelxSgvp">viewModel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -136,14 +136,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>equal</code> relation between any two contrains</p>
+                        <p>Data model for the cell</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">equal</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">viewModel</span><span class="p">:</span> <span class="kt">ViewModel</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -153,9 +153,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CoreUIKit18ConstraintRelationO14greaterOrEqualyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/greaterOrEqual" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CoreUIKit18ConstraintRelationO14greaterOrEqualyA2CmF">greaterOrEqual</a>
+                    <a name="/s:9CoreUIKit22BaseCollectionViewCellC10setupViewsyyF"></a>
+                    <a name="//apple_ref/swift/Method/setupViews()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CoreUIKit22BaseCollectionViewCellC10setupViewsyyF">setupViews()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -163,14 +163,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>greaterOrEqual</code> relation between any two contrains</p>
+                        <p>Sets the views of the cell</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">greaterOrEqual</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">setupViews</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -180,9 +180,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CoreUIKit18ConstraintRelationO11lessOrEqualyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/lessOrEqual" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CoreUIKit18ConstraintRelationO11lessOrEqualyA2CmF">lessOrEqual</a>
+                    <a name="/s:9CoreUIKit22BaseCollectionViewCellC9setupDatayyF"></a>
+                    <a name="//apple_ref/swift/Method/setupData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CoreUIKit22BaseCollectionViewCellC9setupDatayyF">setupData()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -190,14 +190,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>lessOrEqual</code> relation between any two contrains</p>
+                        <p>Sets the data for views in the cell</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lessOrEqual</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">setupData</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
