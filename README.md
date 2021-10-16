@@ -1,8 +1,8 @@
 # CoreUIKit
 
-![MIT license](https://img.shields.io/github/license/0vertex/CoreUIKit?style=flat-square)
+![MIT license](https://img.shields.io/github/license/0vertex/CoreUIKit)
 ![CoreUIKit CI workflow](https://github.com/0vertex/CoreUIKit/actions/workflows/build.yml/badge.svg)
-![Pod](https://img.shields.io/cocoapods/v/CoreUIKit?style=flat-square)
+![Pod](https://img.shields.io/cocoapods/v/CoreUIKit)
 ![Carthage](https://img.shields.io/badge/Carthage-Compatible-green)
 ![SPM](https://img.shields.io/badge/SPM-Compatible-green)
 
