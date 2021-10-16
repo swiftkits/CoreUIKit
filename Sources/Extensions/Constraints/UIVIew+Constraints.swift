@@ -120,7 +120,7 @@ public extension UIView {
     func bottom(with anchor: NSLayoutYAxisAnchor,
                 relation: ConstraintRelation = .equal,
                 margin: CGFloat = .zero) -> Self {
-        let bottomAnchor = self.bottomAnchor.constraint(with: relation, on: anchor, margin: margin)
+        let bottomAnchor = self.bottomAnchor.constraint(with: relation, on: anchor, margin: -margin)
         self.setConstraintIdentifier(for: "bottom", for: bottomAnchor)
         
         bottomAnchor.isActive = true
