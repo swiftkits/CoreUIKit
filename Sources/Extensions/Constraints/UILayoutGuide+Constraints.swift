@@ -1,29 +1,22 @@
 //
-//  UIVIew+Constraints.swift
+//  UILayoutGuide+Constraints.swift
 //  CoreUIKit
 //
-//  Created by Manish on 03/09/21.
+//  Created by Manish on 17/10/21.
 //
 
 import UIKit
 
 // MARK: - Add
-extension UIView: Anchorable {
+extension UILayoutGuide: Anchorable {
     
     /// Adds current view to provided parent view (if it's not already added)
     /// - Parameter parentView: a view on which current view (child view) needs to be added
     /// - Returns: current view
     @discardableResult
     public func add(to parentView: UIView) -> Self {
-        if self.isDescendant(of: parentView) {
-            return self
-        }
-        
         // Add
-        parentView.addSubview(self)
-        
-        // Enable constraints
-        self.translatesAutoresizingMaskIntoConstraints = false
+        parentView.addLayoutGuide(self)
         
         return self
     }
@@ -31,14 +24,14 @@ extension UIView: Anchorable {
     /// Sets `accessibilityIdentifier` on current view
     @discardableResult
     public func set(identifier: String) -> Self {
-        self.accessibilityIdentifier = identifier
+        self.identifier = identifier
         
         return self
     }
 }
 
 // MARK: - Constraints
-public extension UIView {
+public extension UILayoutGuide {
     
     /// Sets leading, trailing, top and bottom anchors equal to parent view's anchors
     /// - Parameters:
@@ -52,7 +45,7 @@ public extension UIView {
             .trailing(with: parentView.trailingAnchor, margin: margin.right)
             .top(with: parentView.topAnchor, margin: margin.top)
             .bottom(with: parentView.bottomAnchor, margin: margin.bottom)
-
+        
         return self
     }
     
@@ -68,9 +61,9 @@ public extension UIView {
                  margin: CGFloat = .zero) -> Self {
         let leadingAnchor = self.leadingAnchor.constraint(with: relation, on: anchor, margin: margin)
         self.setConstraintIdentifier(for: "leading", for: leadingAnchor)
-
+        
         leadingAnchor.isActive = true
-
+        
         return self
     }
     
@@ -88,14 +81,14 @@ public extension UIView {
         self.setConstraintIdentifier(for: "trailing", for: trailingAnchor)
         
         trailingAnchor.isActive = true
-
+        
         return self
     }
     
     /// Sets top anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as top anchor on current view
-    ///   - relation: relation between current view and relative contraint   
+    ///   - relation: relation between current view and relative contraint
     ///   - margin: top margin from current view
     /// - Returns: current view
     @discardableResult
@@ -104,9 +97,9 @@ public extension UIView {
              margin: CGFloat = .zero) -> Self {
         let topAnchor = self.topAnchor.constraint(with: relation, on: anchor, margin: margin)
         self.setConstraintIdentifier(for: "top", for: topAnchor)
-
+        
         topAnchor.isActive = true
-
+        
         return self
     }
     
@@ -163,9 +156,9 @@ public extension UIView {
                  margin: CGFloat = .zero) -> Self {
         let centerXAnchor = self.centerXAnchor.constraint(equalTo: anchor, constant: margin)
         self.setConstraintIdentifier(for: "centerX", for: centerXAnchor)
-
+        
         centerXAnchor.isActive = true
-
+        
         return self
     }
     
@@ -179,9 +172,9 @@ public extension UIView {
                  margin: CGFloat = .zero) -> Self {
         let centerYAnchor = self.centerYAnchor.constraint(equalTo: anchor, constant: margin)
         self.setConstraintIdentifier(for: "centerY", for: centerYAnchor)
-
+        
         centerYAnchor.isActive = true
-
+        
         return self
     }
     
@@ -202,13 +195,12 @@ public extension UIView {
     
 }
 
-public extension UIView {
+public extension UILayoutGuide {
     
-     func setConstraintIdentifier(for anchorType: String, for constraint: NSLayoutConstraint) {
-        guard let safeIdentifier = self.accessibilityIdentifier else { return }
+    func setConstraintIdentifier(for anchorType: String, for constraint: NSLayoutConstraint) {
         
-        if !safeIdentifier.isEmpty && !anchorType.isEmpty {
-            constraint.identifier = "\(safeIdentifier)_\(anchorType)Anchor"
+        if !self.identifier.isEmpty && !anchorType.isEmpty {
+            constraint.identifier = "\(self.identifier)_\(anchorType)Anchor"
         }
     }
     

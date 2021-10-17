@@ -46,13 +46,13 @@ private extension ViewController {
     func setupContainer() {
         self.view.addLayoutGuide(self.container)
         
-        NSLayoutConstraint.activate([
-            self.container.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            self.container.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 30),
-            self.container.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -30),
-            self.container.heightAnchor.constraint(equalToConstant: 200)
-        ])
-        
+        self.container
+            .set(identifier: "container")
+            .add(to: self.view)
+            .centerY(with: self.view.centerYAnchor)
+            .leading(with: self.view.leadingAnchor, margin: 30)
+            .trailing(with: self.view.trailingAnchor, margin: 30)
+            .with(height: 200)
     }
     
     func setupUserNameViews() {
