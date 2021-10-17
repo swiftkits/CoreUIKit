@@ -48,10 +48,10 @@ public extension UIView {
     @discardableResult
     func allAnchorsSame(on parentView: UIView,
                         margin: UIEdgeInsets = .zero) -> Self {
-        self.leading(with: parentView.leadingAnchor)
-            .trailing(with: parentView.trailingAnchor)
-            .top(with: parentView.topAnchor)
-            .bottom(with: parentView.bottomAnchor)
+        self.leading(with: parentView.leadingAnchor, margin: margin.left)
+            .trailing(with: parentView.trailingAnchor, margin: margin.right)
+            .top(with: parentView.topAnchor, margin: margin.top)
+            .bottom(with: parentView.bottomAnchor, margin: margin.bottom)
 
         return self
     }
