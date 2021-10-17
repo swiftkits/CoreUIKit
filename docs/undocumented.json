@@ -6,6 +6,111 @@
       "symbol": "BaseView.ViewModel",
       "symbol_kind": "source.lang.swift.decl.associatedtype",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 10,
+      "symbol": "Anchorable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 12,
+      "symbol": "Anchorable.add(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 15,
+      "symbol": "Anchorable.set(identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 18,
+      "symbol": "Anchorable.allAnchorsSame(on:margin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 21,
+      "symbol": "Anchorable.leading(with:relation:margin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 26,
+      "symbol": "Anchorable.trailing(with:relation:margin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 31,
+      "symbol": "Anchorable.top(with:relation:margin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 36,
+      "symbol": "Anchorable.bottom(with:relation:margin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 41,
+      "symbol": "Anchorable.with(width:height:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 44,
+      "symbol": "Anchorable.centerX(with:margin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 47,
+      "symbol": "Anchorable.centerY(with:margin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 50,
+      "symbol": "Anchorable.center(on:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Core/Anchorable.swift",
+      "line": 52,
+      "symbol": "Anchorable.setConstraintIdentifier(for:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Extensions/Constraints/UILayoutGuide+Constraints.swift",
+      "line": 200,
+      "symbol": "UILayoutGuide.setConstraintIdentifier(for:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/manish/Documents/workspace/CoreUIKit/Sources/Extensions/Constraints/UIVIew+Constraints.swift",
+      "line": 207,
+      "symbol": "UIView.setConstraintIdentifier(for:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/manish/Documents/workspace/CoreUIKit"
