@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          CoreUIKit 0.2.0 Docs
+          CoreUIKit 0.3.0 Docs
         </a>
-         (97% documented)
+         (78% documented)
       </p>
     
       <div class="header-col--secondary">
@@ -82,6 +82,9 @@
                 <a class="nav-group-task-link" href="../Extensions/UIEdgeInsets.html">UIEdgeInsets</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UILayoutGuide.html">UILayoutGuide</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIView.html">UIView</a>
               </li>
             </ul>
@@ -89,6 +92,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Anchorable.html">Anchorable</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/BaseInitializableView.html">BaseInitializableView</a>
               </li>
@@ -110,7 +116,7 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">UIView</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UIView</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Anchorable.html">Anchorable</a></span></code></pre>
 
                 </div>
               </div>
@@ -143,7 +149,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">to</span> <span class="nv">parentView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">to</span> <span class="nv">parentView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -194,7 +200,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -842,6 +848,33 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9CoreUIKitE23setConstraintIdentifier3forAEySS_So08NSLayoutE0CtF"></a>
+                    <a name="//apple_ref/swift/Method/setConstraintIdentifier(for:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9CoreUIKitE23setConstraintIdentifier3forAEySS_So08NSLayoutE0CtF">setConstraintIdentifier(for:<wbr>for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setConstraintIdentifier</span><span class="p">(</span><span class="k">for</span> <span class="nv">anchorType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">for</span> <span class="nv">constraint</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -850,7 +883,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://github.com/0vertex/" target="_blank" rel="external noopener">Manish</a>. All rights reserved. (Last updated: 2021-10-16)</p>
+      <p>&copy; 2021 <a class="link" href="https://github.com/0vertex/" target="_blank" rel="external noopener">Manish</a>. All rights reserved. (Last updated: 2021-10-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>

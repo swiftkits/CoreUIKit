@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		134E17A626E29C320057F70C /* UIVIew+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E17A526E29C320057F70C /* UIVIew+Constraints.swift */; };
 		1354C54826F7645D00C8294C /* TestUIViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1354C54726F7645D00C8294C /* TestUIViewConstraints.swift */; };
+		1368BF48271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368BF47271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift */; };
+		1368BF4A271BDE1000EA7595 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368BF49271BDE1000EA7595 /* Anchorable.swift */; };
 		136B5436271B27ED002297C3 /* TestBaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B5435271B27ED002297C3 /* TestBaseCollectionView.swift */; };
 		139E090726E13BB900A72A24 /* CoreUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139E08FD26E13BB900A72A24 /* CoreUIKit.framework */; };
 		139E090E26E13BB900A72A24 /* CoreUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 139E090026E13BB900A72A24 /* CoreUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		134E17A526E29C320057F70C /* UIVIew+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Constraints.swift"; sourceTree = "<group>"; };
 		1354C54726F7645D00C8294C /* TestUIViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIViewConstraints.swift; sourceTree = "<group>"; };
+		1368BF47271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+Constraints.swift"; sourceTree = "<group>"; };
+		1368BF49271BDE1000EA7595 /* Anchorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		136B5435271B27ED002297C3 /* TestBaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaseCollectionView.swift; sourceTree = "<group>"; };
 		139E08FD26E13BB900A72A24 /* CoreUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		139E090026E13BB900A72A24 /* CoreUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreUIKit.h; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			children = (
 				13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */,
 				13ECCC08271A8A3B000DAD01 /* ConstraintRelatable.swift */,
+				1368BF49271BDE1000EA7595 /* Anchorable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				134E17A526E29C320057F70C /* UIVIew+Constraints.swift */,
 				13ECCC04271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift */,
 				13ECCC06271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift */,
+				1368BF47271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift */,
 			);
 			path = Constraints;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1368BF4A271BDE1000EA7595 /* Anchorable.swift in Sources */,
 				139E092E26E1404500A72A24 /* BaseTableView.swift in Sources */,
 				139E092826E13CE600A72A24 /* BaseView.swift in Sources */,
 				139E092C26E13ECE00A72A24 /* BaseInitializableView.swift in Sources */,
@@ -308,6 +315,7 @@
 				13ECCC05271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift in Sources */,
 				139E093026E1422F00A72A24 /* BaseTableViewCell.swift in Sources */,
 				139E092A26E13CF200A72A24 /* BaseViewModel.swift in Sources */,
+				1368BF48271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift in Sources */,
 				13ECCC11271AA9AB000DAD01 /* BaseCollectionViewCell.swift in Sources */,
 				134E17A626E29C320057F70C /* UIVIew+Constraints.swift in Sources */,
 			);
