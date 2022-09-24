@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
   spec.name          = 'CoreUIKit'
-  spec.version       = '0.3.0'
+  spec.version       = '0.3.1'
   spec.license       = { :type => 'MIT' }
-  spec.homepage      = 'https://github.com/0vertex/CoreUIKit'
+  spec.homepage      = 'https://github.com/swiftkits/CoreUIKit'
   spec.authors       = 'Manish'
   spec.summary       = 'CoreUIKit provides functional and easy to use extensions on top of UIKit.'
-  spec.source        = { :git => 'https://github.com/0vertex/CoreUIKit.git', :tag => spec.version }
+  spec.source        = { :git => 'https://github.com/swiftkits/CoreUIKit.git', :tag => spec.version }
   spec.module_name   = 'CoreUIKit'
   spec.swift_version = '5.0'
 
