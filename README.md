@@ -1,7 +1,7 @@
 # CoreUIKit
 
-![MIT license](https://img.shields.io/github/license/0vertex/CoreUIKit)
-![CoreUIKit CI workflow](https://github.com/0vertex/CoreUIKit/actions/workflows/build.yml/badge.svg)
+![MIT license](https://img.shields.io/github/license/swiftkits/CoreUIKit)
+![CoreUIKit CI workflow](https://github.com/swiftkits/CoreUIKit/actions/workflows/build.yml/badge.svg)
 ![Pod](https://img.shields.io/cocoapods/v/CoreUIKit)
 ![Carthage](https://img.shields.io/badge/Carthage-Compatible-green)
 ![SPM](https://img.shields.io/badge/SPM-Compatible-green)
@@ -28,7 +28,7 @@ pod 'CoreUIKit', '0.3.0'
 The Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. [Learn More!](https://swift.org/package-manager/)
 ```swift
 dependencies: [
-    .package(url: "https://github.com/0vertex/CoreUIKit.git", .upToNextMajor(from: "0.3.0"))
+    .package(url: "https://github.com/swiftkits/CoreUIKit.git", .upToNextMajor(from: "0.3.0"))
 ]
 ```
 
@@ -39,7 +39,7 @@ github "CoreUIKit" ~> 0.3.0
 ```
 
 ## Documentation
-- [CoreUIKit Code level doc](https://0vertex.github.io/CoreUIKit/)
+- [CoreUIKit Code level doc](https://swiftkits.github.io/CoreUIKit/)
 
 ## Examples
 - How to add a `subView` on a `parentView` which has `leading` `trailing` `top` and `bottom` anchors matching with it's `parentView`
