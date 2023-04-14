@@ -7,6 +7,8 @@
 
 import UIKit
 
+/// Provides useful features for anything that supports adding constraints to itself.
+/// Best usecases are Views and Guides.
 public protocol Anchorable {
     /// Adds current view to provided parent view (if it's not already added)
     /// - Parameter parentView: a view on which current view (child view) needs to be added
