@@ -2,7 +2,7 @@
 
 ![MIT license](https://img.shields.io/github/license/swiftkits/CoreUIKit)
 ![CoreUIKit CI workflow](https://github.com/swiftkits/CoreUIKit/actions/workflows/build.yml/badge.svg)
-![Pod](https://img.shields.io/cocoapods/v/CoreUIKit)
+![Pod](https://img.shields.io/badge/Cocoapod-Compatible-green)
 ![Carthage](https://img.shields.io/badge/Carthage-Compatible-green)
 ![SPM](https://img.shields.io/badge/SPM-Compatible-green)
 
@@ -39,7 +39,7 @@ github "CoreUIKit" ~> 0.3.2
 ```
 
 ## Documentation
-- [CoreUIKit Code level doc](https://swiftkits.github.io/CoreUIKit/)
+- [CoreUIKit Code level doc](https://swiftkits.github.io/CoreUIKit/documentation/coreuikit/)
 
 ## Examples
 - How to add a `subView` on a `parentView` which has `leading` `trailing` `top` and `bottom` anchors matching with it's `parentView`
