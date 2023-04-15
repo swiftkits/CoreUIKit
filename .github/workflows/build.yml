@@ -38,7 +38,7 @@ jobs:
           run: |
             set -o pipefail && env NSUnbufferedIO=YES \
               $(xcrun --find docc) process-archive \
-                transform-for-static-hosting /tmp/doccgen/Build/Products/Debug-iphoneos/CoreUIKit.doccarchive \
+                transform-for-static-hosting /tmp/doccgen/Build/Products/Debug-iphonesimulator/CoreUIKit.framework \
                 --output-path docs \
                 --hosting-base-path CoreUIKit
         
