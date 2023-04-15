@@ -31,6 +31,9 @@
 		A1BD283F29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD283E29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift */; };
 		A1BD284129EADE08007D9FC2 /* DimensionRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD284029EADE08007D9FC2 /* DimensionRelatable.swift */; };
 		A1BD284329EAE2CE007D9FC2 /* Anchorable+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD284229EAE2CE007D9FC2 /* Anchorable+Implementations.swift */; };
+		A1BD284529EB07AB007D9FC2 /* AnchorProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD284429EB07AB007D9FC2 /* AnchorProvidable.swift */; };
+		A1BD284729EB0AF8007D9FC2 /* UIView+AnchorProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD284629EB0AF8007D9FC2 /* UIView+AnchorProvidable.swift */; };
+		A1BD284929EB0BF8007D9FC2 /* UILayoutGuide+AnchorProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD284829EB0BF8007D9FC2 /* UILayoutGuide+AnchorProvidable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		A1BD283E29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutDimension+DimensionRelatable.swift"; sourceTree = "<group>"; };
 		A1BD284029EADE08007D9FC2 /* DimensionRelatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionRelatable.swift; sourceTree = "<group>"; };
 		A1BD284229EAE2CE007D9FC2 /* Anchorable+Implementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchorable+Implementations.swift"; sourceTree = "<group>"; };
+		A1BD284429EB07AB007D9FC2 /* AnchorProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorProvidable.swift; sourceTree = "<group>"; };
+		A1BD284629EB0AF8007D9FC2 /* UIView+AnchorProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnchorProvidable.swift"; sourceTree = "<group>"; };
+		A1BD284829EB0BF8007D9FC2 /* UILayoutGuide+AnchorProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+AnchorProvidable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 				1368BF49271BDE1000EA7595 /* Anchorable.swift */,
 				A1BD284229EAE2CE007D9FC2 /* Anchorable+Implementations.swift */,
 				A1BD283829EAD947007D9FC2 /* Anchor.swift */,
+				A1BD284429EB07AB007D9FC2 /* AnchorProvidable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -191,7 +198,9 @@
 				A1BD283B29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift */,
 				A1BD283E29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift */,
 				134E17A526E29C320057F70C /* UIVIew+Anchorable.swift */,
+				A1BD284629EB0AF8007D9FC2 /* UIView+AnchorProvidable.swift */,
 				1368BF47271BDCFB00EA7595 /* UILayoutGuide+Anchorable.swift */,
+				A1BD284829EB0BF8007D9FC2 /* UILayoutGuide+AnchorProvidable.swift */,
 			);
 			path = Constraints;
 			sourceTree = "<group>";
@@ -318,7 +327,9 @@
 				1368BF4A271BDE1000EA7595 /* Anchorable.swift in Sources */,
 				139E092E26E1404500A72A24 /* BaseTableView.swift in Sources */,
 				A1BD283F29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift in Sources */,
+				A1BD284929EB0BF8007D9FC2 /* UILayoutGuide+AnchorProvidable.swift in Sources */,
 				A1BD283929EAD947007D9FC2 /* Anchor.swift in Sources */,
+				A1BD284529EB07AB007D9FC2 /* AnchorProvidable.swift in Sources */,
 				139E092826E13CE600A72A24 /* BaseView.swift in Sources */,
 				139E092C26E13ECE00A72A24 /* BaseInitializableView.swift in Sources */,
 				13ECCC03271A8024000DAD01 /* ConstraintRelation.swift in Sources */,
@@ -327,6 +338,7 @@
 				13ECCC09271A8A3B000DAD01 /* ConstraintRelatable.swift in Sources */,
 				139E093026E1422F00A72A24 /* BaseTableViewCell.swift in Sources */,
 				A1BD283C29EADD66007D9FC2 /* NSLayoutXAxisAnchor+ConstraintRelatable.swift in Sources */,
+				A1BD284729EB0AF8007D9FC2 /* UIView+AnchorProvidable.swift in Sources */,
 				139E092A26E13CF200A72A24 /* BaseViewModel.swift in Sources */,
 				A1BD283D29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift in Sources */,
 				1368BF48271BDCFB00EA7595 /* UILayoutGuide+Anchorable.swift in Sources */,
