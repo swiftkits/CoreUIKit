@@ -6,12 +6,6 @@ on:
     pull_request:    
       branches: [ main ]
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-    contents: read
-    pages: write
-    id-token: write
-
 jobs:  
     build:    
         runs-on: macos-latest 
@@ -19,21 +13,21 @@ jobs:
         steps:    
         - uses: actions/checkout@v3    
         
-        - name: Build for iOS      
+        - name: Build for iOS simulator (iPhone 12) 📱     
           run: |
             set -o pipefail && env NSUnbufferedIO=YES \
               xcodebuild build-for-testing \
                 -scheme "CoreUIKit" \
                 -destination "platform=iOS Simulator,OS=latest,name=iPhone 12"    
         
-        - name: Run iOS tests      
+        - name: Run iOS tests 🧪     
           run: |
             set -o pipefail && env NSUnbufferedIO=YES \
               xcodebuild test-without-building \
                 -scheme "CoreUIKitTests" \
                 -destination "platform=iOS Simulator,OS=latest,name=iPhone 12"    
         
-        - name: Build documentation      
+        - name: Build documentation ⚙️     
           run: |
             set -o pipefail && env NSUnbufferedIO=YES \
               xcodebuild docbuild \
@@ -41,7 +35,7 @@ jobs:
                 -scheme "CoreUIKit" \
                 -destination "platform=iOS Simulator,OS=latest,name=iPhone 12"    
         
-        - name: Generate documentation 📄     
+        - name: Generate documentation 🛠️ 📄     
           run: |
             set -o pipefail && env NSUnbufferedIO=YES \
               $(xcrun --find docc) process-archive \
@@ -53,7 +47,25 @@ jobs:
           uses: actions/upload-pages-artifact@v1
           with:
             path: 'docs'
+            
+    # Deploy job
+    deploy:
+        runs-on: macos-latest
         
-        - name: Deploy docs to GitHub Pages 🛠️
-          id: deployment
-          uses: actions/deploy-pages@v1
+        # Add a dependency to the build job
+        needs: build
+
+        # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+        permissions:
+            pages: write      # to deploy to Pages
+            id-token: write   # to verify the deployment originates from an appropriate source
+
+        # Deploy to the github-pages environment
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        
+        steps:
+            - name: Deploy docs to GitHub Pages 🚀
+              id: deployment
+              uses: actions/deploy-pages@v1
