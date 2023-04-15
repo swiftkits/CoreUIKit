@@ -14,4 +14,4 @@
 $(xcrun --find docc) process-archive \
 transform-for-static-hosting "../CoreUIKit/build/Release-iphoneos/CoreUIKit.doccarchive" \
 --output-path "../CoreUIKit/docs" \
---hosting-base-path /
+--hosting-base-path "CoreUIKit"
