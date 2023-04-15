@@ -67,7 +67,6 @@ public protocol Anchorable {
              margin: CGFloat) -> Self
     
     
-    
     /// Sets bottom anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as bottom anchor on current view
@@ -79,6 +78,7 @@ public protocol Anchorable {
                 relation: ConstraintRelation,
                 margin: CGFloat) -> Self
     
+    
     /// Sets width and heoght anchor with given value on current view
     /// - Parameters:
     ///   - width: width value
@@ -86,6 +86,25 @@ public protocol Anchorable {
     /// - Returns: current view
     @discardableResult
     func with(width: CGFloat?, height: CGFloat?) -> Self
+    
+    
+    /// Sets width anchor for the current view to provided value and relation
+    /// - Parameters:
+    ///   - value: `CGFloat` value of width
+    ///   - relation: type of width value relation
+    /// - Returns: current view
+    @discardableResult
+    func width(value: CGFloat, relation: ConstraintRelation) -> Self
+    
+    
+    /// Sets height anchor for the current view to provided value and relation
+    /// - Parameters:
+    ///   - value: `CGFloat` value of height
+    ///   - relation: type of height value relation
+    /// - Returns: current view
+    @discardableResult
+    func height(value: CGFloat, relation: ConstraintRelation) -> Self
+    
     
     /// Sets centerX anchor of the current view to provided anchor
     /// - Parameters:
@@ -103,6 +122,7 @@ public protocol Anchorable {
     @discardableResult
     func centerY(with anchor: NSLayoutYAxisAnchor, margin: CGFloat) -> Self
     
+    
     /// Sets center (X & Y) anchor of the current view to provided anchor
     /// - Parameters:
     ///   - anchor: anchor value, which will be applied as centerX & centerY anchor on current view
@@ -110,6 +130,7 @@ public protocol Anchorable {
     /// - Returns: current view
     @discardableResult
     func center(on parentView: UIView, with size: CGSize) -> Self
+    
     
     /// Sets identifier for given constraints
     func setConstraintIdentifier(for anchorType: String, for constraint: NSLayoutConstraint)

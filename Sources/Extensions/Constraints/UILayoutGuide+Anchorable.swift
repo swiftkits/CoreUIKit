@@ -130,18 +130,31 @@ public extension UILayoutGuide {
               height: CGFloat? = nil) -> Self {
         
         if let safeWidth = width {
-            let widthAnchor = self.widthAnchor.constraint(equalToConstant: safeWidth)
-            self.setConstraintIdentifier(for: "width", for: widthAnchor)
-            
-            widthAnchor.isActive = true
+            self.width(value: safeWidth, relation: .equal)
         }
         
         if let safeHeight = height {
-            let heightAnchor = self.heightAnchor.constraint(equalToConstant: safeHeight)
-            self.setConstraintIdentifier(for: "height", for: heightAnchor)
-            
-            heightAnchor.isActive = true
+            self.height(value: safeHeight, relation: .equal)
         }
+        
+        return self
+    }
+    
+    @discardableResult
+    func width(value: CGFloat, relation: ConstraintRelation) -> Self {
+        let widthAnchor = self.widthAnchor.constant(with: value, relation: relation)
+        self.setConstraintIdentifier(for: "width", for: widthAnchor)
+        widthAnchor.isActive = true
+        
+        return self
+    }
+    
+    @discardableResult
+    func height(value: CGFloat, relation: ConstraintRelation) -> Self {
+        let heightAnchor = self.heightAnchor.constant(with: value, relation: relation)
+        self.setConstraintIdentifier(for: "height", for: heightAnchor)
+        
+        heightAnchor.isActive = true
         
         return self
     }

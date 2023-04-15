@@ -20,13 +20,17 @@
 		139E092E26E1404500A72A24 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E092D26E1404500A72A24 /* BaseTableView.swift */; };
 		139E093026E1422F00A72A24 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E092F26E1422F00A72A24 /* BaseTableViewCell.swift */; };
 		13ECCC03271A8024000DAD01 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */; };
-		13ECCC05271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC04271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift */; };
-		13ECCC07271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC06271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift */; };
 		13ECCC09271A8A3B000DAD01 /* ConstraintRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC08271A8A3B000DAD01 /* ConstraintRelatable.swift */; };
 		13ECCC0C271A998E000DAD01 /* UIEdgeInsets+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC0B271A998E000DAD01 /* UIEdgeInsets+Inits.swift */; };
 		13ECCC0F271AA7A6000DAD01 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC0E271AA7A6000DAD01 /* BaseCollectionView.swift */; };
 		13ECCC11271AA9AB000DAD01 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC10271AA9AB000DAD01 /* BaseCollectionViewCell.swift */; };
 		13ED670B26F713B6008F2DE4 /* TestBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */; };
+		A1BD283929EAD947007D9FC2 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD283829EAD947007D9FC2 /* Anchor.swift */; };
+		A1BD283C29EADD66007D9FC2 /* NSLayoutXAxisAnchor+ConstraintRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD283A29EADD66007D9FC2 /* NSLayoutXAxisAnchor+ConstraintRelatable.swift */; };
+		A1BD283D29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD283B29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift */; };
+		A1BD283F29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD283E29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift */; };
+		A1BD284129EADE08007D9FC2 /* DimensionRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD284029EADE08007D9FC2 /* DimensionRelatable.swift */; };
+		A1BD284329EAE2CE007D9FC2 /* Anchorable+Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD284229EAE2CE007D9FC2 /* Anchorable+Implementations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +60,17 @@
 		139E092D26E1404500A72A24 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
 		139E092F26E1422F00A72A24 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintRelation.swift; sourceTree = "<group>"; };
-		13ECCC04271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutXAxisAnchor+ConstraintRelation.swift"; sourceTree = "<group>"; };
-		13ECCC06271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutYAxisAnchor+ConstraintRelation.swift"; sourceTree = "<group>"; };
 		13ECCC08271A8A3B000DAD01 /* ConstraintRelatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintRelatable.swift; sourceTree = "<group>"; };
 		13ECCC0B271A998E000DAD01 /* UIEdgeInsets+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Inits.swift"; sourceTree = "<group>"; };
 		13ECCC0E271AA7A6000DAD01 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		13ECCC10271AA9AB000DAD01 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaseTableView.swift; sourceTree = "<group>"; };
+		A1BD283829EAD947007D9FC2 /* Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
+		A1BD283A29EADD66007D9FC2 /* NSLayoutXAxisAnchor+ConstraintRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutXAxisAnchor+ConstraintRelatable.swift"; sourceTree = "<group>"; };
+		A1BD283B29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutYAxisAnchor+ConstraintRelatable.swift"; sourceTree = "<group>"; };
+		A1BD283E29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutDimension+DimensionRelatable.swift"; sourceTree = "<group>"; };
+		A1BD284029EADE08007D9FC2 /* DimensionRelatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionRelatable.swift; sourceTree = "<group>"; };
+		A1BD284229EAE2CE007D9FC2 /* Anchorable+Implementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchorable+Implementations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +176,10 @@
 			children = (
 				13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */,
 				13ECCC08271A8A3B000DAD01 /* ConstraintRelatable.swift */,
+				A1BD284029EADE08007D9FC2 /* DimensionRelatable.swift */,
 				1368BF49271BDE1000EA7595 /* Anchorable.swift */,
+				A1BD284229EAE2CE007D9FC2 /* Anchorable+Implementations.swift */,
+				A1BD283829EAD947007D9FC2 /* Anchor.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -176,9 +187,10 @@
 		13ECCC0A271A9961000DAD01 /* Constraints */ = {
 			isa = PBXGroup;
 			children = (
+				A1BD283A29EADD66007D9FC2 /* NSLayoutXAxisAnchor+ConstraintRelatable.swift */,
+				A1BD283B29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift */,
+				A1BD283E29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift */,
 				134E17A526E29C320057F70C /* UIVIew+Anchorable.swift */,
-				13ECCC04271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift */,
-				13ECCC06271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift */,
 				1368BF47271BDCFB00EA7595 /* UILayoutGuide+Anchorable.swift */,
 			);
 			path = Constraints;
@@ -305,19 +317,23 @@
 			files = (
 				1368BF4A271BDE1000EA7595 /* Anchorable.swift in Sources */,
 				139E092E26E1404500A72A24 /* BaseTableView.swift in Sources */,
+				A1BD283F29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift in Sources */,
+				A1BD283929EAD947007D9FC2 /* Anchor.swift in Sources */,
 				139E092826E13CE600A72A24 /* BaseView.swift in Sources */,
 				139E092C26E13ECE00A72A24 /* BaseInitializableView.swift in Sources */,
-				13ECCC07271A810D000DAD01 /* NSLayoutYAxisAnchor+ConstraintRelation.swift in Sources */,
 				13ECCC03271A8024000DAD01 /* ConstraintRelation.swift in Sources */,
 				13ECCC0F271AA7A6000DAD01 /* BaseCollectionView.swift in Sources */,
 				13ECCC0C271A998E000DAD01 /* UIEdgeInsets+Inits.swift in Sources */,
 				13ECCC09271A8A3B000DAD01 /* ConstraintRelatable.swift in Sources */,
-				13ECCC05271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift in Sources */,
 				139E093026E1422F00A72A24 /* BaseTableViewCell.swift in Sources */,
+				A1BD283C29EADD66007D9FC2 /* NSLayoutXAxisAnchor+ConstraintRelatable.swift in Sources */,
 				139E092A26E13CF200A72A24 /* BaseViewModel.swift in Sources */,
+				A1BD283D29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift in Sources */,
 				1368BF48271BDCFB00EA7595 /* UILayoutGuide+Anchorable.swift in Sources */,
 				13ECCC11271AA9AB000DAD01 /* BaseCollectionViewCell.swift in Sources */,
 				134E17A626E29C320057F70C /* UIVIew+Anchorable.swift in Sources */,
+				A1BD284329EAE2CE007D9FC2 /* Anchorable+Implementations.swift in Sources */,
+				A1BD284129EADE08007D9FC2 /* DimensionRelatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
