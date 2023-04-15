@@ -65,6 +65,7 @@ jobs:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
         
+        if: github.ref == 'refs/heads/main'
         steps:
             - name: Deploy docs to GitHub Pages 🚀
               id: deployment
