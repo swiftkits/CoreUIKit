@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'CoreUIKit'
-  spec.version       = '0.3.1'
+  spec.version       = '0.3.2'
   spec.license       = { :type => 'MIT' }
   spec.homepage      = 'https://github.com/swiftkits/CoreUIKit'
   spec.authors       = 'Manish'

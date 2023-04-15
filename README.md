@@ -21,21 +21,21 @@
 ### Cocoapods
 CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. [Learn More!](https://cocoapods.org/)
 ```ruby
-pod 'CoreUIKit', '0.3.0'
+pod 'CoreUIKit', '0.3.2'
 ```
 
 ### Swift package manager
 The Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. [Learn More!](https://swift.org/package-manager/)
 ```swift
 dependencies: [
-    .package(url: "https://github.com/swiftkits/CoreUIKit.git", .upToNextMajor(from: "0.3.0"))
+    .package(url: "https://github.com/swiftkits/CoreUIKit.git", .upToNextMajor(from: "0.3.2"))
 ]
 ```
 
 ### Carthage
 A simple, decentralized dependency manager for Cocoa. [Learn More!](https://github.com/Carthage/Carthage)
 ```ruby
-github "CoreUIKit" ~> 0.3.0
+github "CoreUIKit" ~> 0.3.2
 ```
 
 ## Documentation
