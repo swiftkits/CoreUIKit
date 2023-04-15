@@ -1,4 +1,4 @@
-# CoreUIKit
+![CoreUIKit banner image](./assets/CoreUIKit-banner.png)
 
 ![MIT license](https://img.shields.io/github/license/swiftkits/CoreUIKit)
 ![CoreUIKit CI workflow](https://github.com/swiftkits/CoreUIKit/actions/workflows/build.yml/badge.svg)
@@ -6,7 +6,8 @@
 ![Carthage](https://img.shields.io/badge/Carthage-Compatible-green)
 ![SPM](https://img.shields.io/badge/SPM-Compatible-green)
 
-`CoreUIKit` provides functional and easy to use extensions on top of `UIKit`.
+# Welcome to CoreUIKit!
+`CoreUIKit` provides functional and easy to use extensions on top of `UIKit`. Same concepts but less code!
 
 - [Installation Guide](#installation)
     - [Install using Cocoapods](#cocoapods)
