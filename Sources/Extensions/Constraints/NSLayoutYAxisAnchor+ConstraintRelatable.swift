@@ -1,5 +1,5 @@
 //
-//  NSLayoutXAxisAnchor+ConstraintRelation.swift
+//  NSLayoutYAxisAnchor+ConstraintRelatable.swift
 //  CoreUIKit
 //
 //  Created by Manish on 16/10/21.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-extension NSLayoutXAxisAnchor: ConstraintRelatable {
+extension NSLayoutYAxisAnchor: ConstraintRelatable {
     
     func constraint(with relation: ConstraintRelation,
-                    on relativeViewAnchor: NSLayoutXAxisAnchor,
+                    on relativeViewAnchor: NSLayoutYAxisAnchor,
                     margin: CGFloat) -> NSLayoutConstraint {
         switch relation {
         case .equal:
