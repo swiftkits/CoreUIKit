@@ -18,6 +18,6 @@ jobs:
     - name: Run iOS tests
       run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme CoreUIKitTests -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
     - name: Build documentation
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild docbuild -scheme CoreUIKitTests -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild docbuild -scheme CoreUIKit -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
     - name: Generate documentation
       run: set -o pipefail && env NSUnbufferedIO=YES $(xcrun --find docc) process-archive transform-for-static-hosting "../CoreUIKit/build/Release-iphoneos/CoreUIKit.doccarchive" --output-path "../CoreUIKit/docs" --hosting-base-path "CoreUIKit" | xcpretty
