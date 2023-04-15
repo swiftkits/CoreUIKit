@@ -1,19 +1,71 @@
 name: Build & Test CI
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on:  
+    push:    
+      branches: [ main ]  
+    pull_request:    
+      branches: [ main ]
 
-jobs:
-  build:
+jobs:  
+    build:    
+        runs-on: macos-latest 
 
-    runs-on: macos-latest
+        steps:    
+        - uses: actions/checkout@v3    
+        
+        - name: Build for iOS simulator (iPhone 12) 📱     
+          run: |
+            set -o pipefail && env NSUnbufferedIO=YES \
+              xcodebuild build-for-testing \
+                -scheme "CoreUIKit" \
+                -destination "platform=iOS Simulator,OS=latest,name=iPhone 12"    
+        
+        - name: Run iOS tests 🧪     
+          run: |
+            set -o pipefail && env NSUnbufferedIO=YES \
+              xcodebuild test-without-building \
+                -scheme "CoreUIKitTests" \
+                -destination "platform=iOS Simulator,OS=latest,name=iPhone 12"    
+        
+        - name: Build documentation ⚙️     
+          run: |
+            set -o pipefail && env NSUnbufferedIO=YES \
+              xcodebuild docbuild \
+                -derivedDataPath /tmp/doccgen \
+                -scheme "CoreUIKit" \
+                -destination "platform=iOS Simulator,OS=latest,name=iPhone 12"    
+        
+        - name: Generate documentation 🛠️ 📄     
+          run: |
+            set -o pipefail && env NSUnbufferedIO=YES \
+              $(xcrun --find docc) process-archive \
+                transform-for-static-hosting /tmp/doccgen/Build/Products/Debug-iphonesimulator/CoreUIKit.doccarchive \
+                --output-path docs \
+                --hosting-base-path CoreUIKit
+        
+        - name: Upload Docs to doc folder 🗂️
+          uses: actions/upload-pages-artifact@v1
+          with:
+            path: 'docs'
+            
+    # Deploy job
+    deploy:
+        runs-on: macos-latest
+        
+        # Add a dependency to the build job
+        needs: build
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build for iOS
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme CoreUIKit -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
-    - name: Run iOS tests
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme CoreUIKitTests -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
+        # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+        permissions:
+            pages: write      # to deploy to Pages
+            id-token: write   # to verify the deployment originates from an appropriate source
+
+        # Deploy to the github-pages environment
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        
+        steps:
+            - name: Deploy docs to GitHub Pages 🚀
+              id: deployment
+              uses: actions/deploy-pages@v1
