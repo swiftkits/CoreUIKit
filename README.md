@@ -1,4 +1,4 @@
-![CoreUIKit banner image](./assets/CoreUIKit.png)
+![CoreUIKit banner image](./assets/CoreUIKit-banner.png)
 
 ![MIT license](https://img.shields.io/github/license/swiftkits/CoreUIKit)
 ![CoreUIKit CI workflow](https://github.com/swiftkits/CoreUIKit/actions/workflows/build.yml/badge.svg)
