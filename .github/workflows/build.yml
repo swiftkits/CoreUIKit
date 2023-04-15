@@ -1,23 +1,44 @@
 name: Build & Test CI
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on:  
+    push:    
+      branches: [ main ]  
+    pull_request:    
+      branches: [ main ]
+jobs:  
+    build:    
+        runs-on: macos-latest 
 
-jobs:
-  build:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build for iOS
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme CoreUIKit -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
-    - name: Run iOS tests
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme CoreUIKitTests -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
-    - name: Build documentation
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild docbuild -scheme CoreUIKit -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
-    - name: Generate documentation
-      run: set -o pipefail && env NSUnbufferedIO=YES $(xcrun --find docc) process-archive transform-for-static-hosting "/build/Release-iphoneos/CoreUIKit.doccarchive" --output-path "/docs" --hosting-base-path "CoreUIKit" | xcpretty
+        steps:    
+        - uses: actions/checkout@v3    
+        
+        - name: Build for iOS      
+          run: |
+            set -o pipefail && env NSUnbufferedIO=YES \
+            xcodebuild build-for-testing \
+            -scheme "CoreUIKit" \
+            -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty    
+        
+        - name: Run iOS tests      
+          run: |
+            set -o pipefail && env NSUnbufferedIO=YES \
+            xcodebuild test-without-building \
+            -scheme "CoreUIKitTests" \
+            -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty    
+        
+        - name: Build documentation      
+          run: |
+            set -o pipefail && env NSUnbufferedIO=YES \
+            xcodebuild docbuild \
+            -derivedDataPath "/tmp/docbuild" \
+            -scheme "CoreUIKit" \
+            -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty    
+        
+        - name: Generate documentation      
+          run: |
+            set -o pipefail && env NSUnbufferedIO=YES \
+            $(xcrun --find docc) \
+            process-archive \
+            transform-for-static-hosting "/tmp/docbuild/Build/Products/Debug-iphoneos/CoreUIKit.doccarchive" \
+            --output-path "docs" \
+            --hosting-base-path "CoreUIKit" | xcpretty
