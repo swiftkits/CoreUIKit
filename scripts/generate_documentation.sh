@@ -6,10 +6,12 @@
 #  Created by Manish
 #
 
+xcodebuild docbuild \
+-scheme "CoreUIKit" \
+-derivedDataPath "../CoreUIKit/docs/doccarchive" \
+-destination 'platform=iOS Simulator,name=iPhone 13'
 
-jazzy \
---author_url="https://github.com/0vertex/" \
---author="Manish" \
---github_url="https://github.com/0vertex/CoreUIKit" \
---theme=fullwidth \
---output="../CoreUIKit/docs"
+$(xcrun --find docc) process-archive \
+transform-for-static-hosting "../CoreUIKit/docs/doccarchive/CoreUIKit.doccarchive" \
+--output-path "../CoreUIKit/docs" \
+--hosting-base-path /
