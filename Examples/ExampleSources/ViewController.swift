@@ -51,7 +51,7 @@ private extension ViewController {
             .add(to: self.view)
             .centerY(with: self.view.centerYAnchor)
             .leading(with: self.view.leadingAnchor, margin: 30)
-            .trailing(with: self.view.trailingAnchor, margin: 30)
+            .trailing(with: self.view.trailingAnchor, margin: -30)
             .with(height: 200)
     }
     
@@ -77,18 +77,31 @@ private extension ViewController {
     func setupPasswordViews() {
         self.passwordLabel
             .set(identifier: "passwordLabel")
-            .add(to: self.view)
-            .leading(with: self.userNameLabel.leadingAnchor)
-            .trailing(with: self.userNameLabel.trailingAnchor)
-            .top(with: self.userNameTextField.bottomAnchor, margin: 25)
+            //.add(to: self.view)
+            .plug(to: self.view,
+                  having: [
+                    .leading(self.userNameLabel),
+                    .trailing(self.userNameLabel),
+                    .top(self.userNameTextField, .bottom, margin: 5)
+                  ])
+            //.leading(with: self.userNameLabel.leadingAnchor)
+            //.trailing(with: self.userNameLabel.trailingAnchor)
+            //.top(with: self.userNameTextField.bottomAnchor, margin: 25)
         
         self.passwordTextField
             .set(identifier: "passwordTextField")
-            .add(to: self.view)
-            .leading(with: self.userNameLabel.leadingAnchor)
-            .trailing(with: self.userNameLabel.trailingAnchor)
-            .top(with: self.passwordLabel.bottomAnchor, margin: 5)
-            .with(height: 50)
+            //.add(to: self.view)
+            .plug(to: self.view,
+                  having: [
+                    .leading(self.userNameLabel),
+                    .trailing(self.userNameLabel),
+                    .top(self.passwordLabel, .bottom, margin: 5),
+                    .height(50)
+                  ])
+            //.leading(with: self.userNameLabel.leadingAnchor)
+            //.trailing(with: self.userNameLabel.trailingAnchor)
+            //.top(with: self.passwordLabel.bottomAnchor, margin: 5)
+            //.with(height: 50)
         self.passwordTextField.backgroundColor = UIColor.lightGray
         self.passwordTextField.layer.cornerRadius = 8
     }

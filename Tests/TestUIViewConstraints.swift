@@ -72,3 +72,27 @@ extension TestUIViewConstraints {
     }
     
 }
+
+extension TestUIViewConstraints {
+    
+    func test_UIView_pluggable() {
+        self.sut
+            .set(identifier: "sut")
+            .plug(to: self.testVC.view,
+                  having: [
+                    .top(self.testVC.view),
+                    .leading(self.testVC.view),
+                    .width(100),
+                    .height(150)
+                  ])
+        
+        self.testVC.view.layoutIfNeeded()
+        
+        XCTAssertTrue(self.sut.isDescendant(of: self.testVC.view))
+        XCTAssertTrue(self.testVC.view.constraints.contains(where: { $0.identifier == "sut_leadingAnchor" }))
+        XCTAssertTrue(self.testVC.view.constraints.contains(where: { $0.identifier == "sut_topAnchor" }))
+        XCTAssertEqual(self.sut.bounds.width, 100)
+        XCTAssertEqual(self.sut.bounds.height, 150)
+    }
+    
+}
