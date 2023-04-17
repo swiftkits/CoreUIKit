@@ -1,28 +1,46 @@
 @Tutorial(time: 15) {
     @Intro(title: "Introduction to Constraint") {
-        <#text#>
-        
-        @Image(source: <#file#>, alt: "<#accessible description#>")
+        A Constraint contains the information about the view's position or diemention.
     }
     
-    @Section(title: "<#text#>") {
+    @Section(title: "Understanding constraints") {
         @ContentAndMedia {
-            <#text#>
+            A constraint is information, combined with Anchor and Margin details.
             
-            @Image(source: <#file#>, alt: "<#accessible description#>")
+            @Image(source: "Constraint", alt: "Image describing usage of constraint")
         }
         
         @Steps {
             @Step {
-                <#text#>
+                Create leading constraint connecting to super view's leading anchor with 50 points of space/margin from the left side.
                 
-                @Image(source: <#file#>, alt: "<#accessible description#>")
+                @Code(name: "MyCustomView.swift", file: ConstraintLeadingDemo.swift) {
+                    @Image(source: "Constraint-Leading", alt: "Image describing the creation of leading constraint.")
+                }
             }
             
             @Step {
-                <#text#>
+                Create top anchor constraint to super view's top anchor with 50 points of space/margin from the top side.
                 
-                @Code(name: "<#display name#>", file: <#filename.swift#>)
+                @Code(name: "MyCustomView.swift", file: ConstraintLeadingTopDemo.swift) {
+                    @Image(source: "Constraint-LeadingTop", alt: "Image describing the creation of leading and top constraints.")
+                }
+            }
+            
+            @Step {
+                Create width constraint with 250 as it's diemention.
+                
+                @Code(name: "MyCustomView.swift", file: ConstraintLeadingTopWidth.swift) {
+                    @Image(source: "Constraint-LeadingTopWidth", alt: "Image describing the creation of leading, top and width constraint.")
+                }
+            }
+            
+            @Step {
+                Create height constraint with 250 as it's diemention.
+                
+                @Code(name: "MyCustomView.swift", file: ConstraintLeadingTopWidthHeight.swift) {
+                    @Image(source: "Constraint-All", alt: "Image describing the creation of leading, top, width and height constraints.")
+                }
             }
         }
     }
