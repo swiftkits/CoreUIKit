@@ -5,6 +5,14 @@
         @Image(source: "CoreUIKit", alt: "CoreUIKit banner image")
     }
     
+    @Chapter(name: "Install CoreUIKit") {
+        It's very easy to install CoreUIKit either using `Cocoapod`, `Swift package manager` or `Carthage`.
+        
+        @Image(source: "Setups", alt: "Image describing installation guides")
+        
+        @TutorialReference(tutorial: "doc:Setup CoreUIKit framework")
+    }    
+    
     @Chapter(name: "Basics of Anchors") {
         Anchors are the main building blocks of `CoreUIKit`, we size and position views using these.
         
@@ -28,9 +36,6 @@
         
         @Image(source: "Debugging", alt: "Image describing usage of anchors on multiple views.")
         
-        @TutorialReference(tutorial: "doc:Setup CoreUIKit framework")
-        @TutorialReference(tutorial: "doc:Simple View Positions")
-        @TutorialReference(tutorial: "doc:Complex View Relations")
         @TutorialReference(tutorial: "doc:Debugging")
     }
 }
