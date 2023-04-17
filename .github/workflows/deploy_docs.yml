@@ -1,0 +1,61 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Swift
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+    # Deploy job
+    deploy:
+        runs-on: macos-latest
+
+        # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+        permissions:
+            contents: read
+            pages: write      # to deploy to Pages
+            id-token: write   # to verify the deployment originates from an appropriate source
+
+        # Allow one concurrent deployment
+        concurrency:
+          group: "pages"
+          cancel-in-progress: true
+
+        # Deploy to the github-pages environment
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        
+        if: github.ref == 'refs/heads/main'
+        steps:
+            - name: Checkout 🛄
+              uses: actions/checkout@v3
+        
+            - name: Build documentation ⚙️     
+              run: |
+                set -o pipefail && env NSUnbufferedIO=YES \
+                  xcodebuild docbuild \
+                    -derivedDataPath /tmp/doccgen \
+                    -scheme "CoreUIKit" \
+                    -destination 'generic/platform=iOS'    
+        
+            - name: Generate documentation 🛠️ 📄     
+              run: |
+                set -o pipefail && env NSUnbufferedIO=YES \
+                  $(xcrun --find docc) process-archive \
+                    transform-for-static-hosting /tmp/doccgen/Build/Products/Debug-iphonesimulator/CoreUIKit.doccarchive \
+                    --output-path docs \
+                    --hosting-base-path CoreUIKit
+
+            - name: Upload Docs to doc folder 🗂️
+              uses: actions/upload-pages-artifact@v1
+              with:
+                path: 'docs'
+            
+            - name: Deploy docs to GitHub Pages 🚀
+              id: deployment
+              uses: actions/deploy-pages@v1
