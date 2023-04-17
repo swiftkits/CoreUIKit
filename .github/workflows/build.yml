@@ -13,41 +13,21 @@ jobs:
         steps:    
         - uses: actions/checkout@v3    
         
-        - name: Build for iOS simulator (iPhone 12) 📱     
+        - name: Build for iOS simulator (iPhone 14) 📱     
           run: |
             set -o pipefail && env NSUnbufferedIO=YES \
               xcodebuild build-for-testing \
                 -scheme "CoreUIKit" \
-                -destination "platform=iOS Simulator,OS=latest,name=iPhone 12"    
+                -destination "platform=iOS Simulator,OS=latest,name=iPhone 14"    
         
         - name: Run iOS tests 🧪     
           run: |
             set -o pipefail && env NSUnbufferedIO=YES \
               xcodebuild test-without-building \
                 -scheme "CoreUIKitTests" \
-                -destination "platform=iOS Simulator,OS=latest,name=iPhone 12"    
-        
-        - name: Build documentation ⚙️     
-          run: |
-            set -o pipefail && env NSUnbufferedIO=YES \
-              xcodebuild docbuild \
-                -derivedDataPath /tmp/doccgen \
-                -scheme "CoreUIKit" \
-                -destination "platform=iOS Simulator,OS=latest,name=iPhone 12"    
-        
-        - name: Generate documentation 🛠️ 📄     
-          run: |
-            set -o pipefail && env NSUnbufferedIO=YES \
-              $(xcrun --find docc) process-archive \
-                transform-for-static-hosting /tmp/doccgen/Build/Products/Debug-iphonesimulator/CoreUIKit.doccarchive \
-                --output-path docs \
-                --hosting-base-path CoreUIKit
-        
-        - name: Upload Docs to doc folder 🗂️
-          uses: actions/upload-pages-artifact@v1
-          with:
-            path: 'docs'
-            
+                -destination "platform=iOS Simulator,OS=latest,name=iPhone 14"    
+
+
     # Deploy job
     deploy:
         runs-on: macos-latest
@@ -57,8 +37,14 @@ jobs:
 
         # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
         permissions:
+            contents: read
             pages: write      # to deploy to Pages
             id-token: write   # to verify the deployment originates from an appropriate source
+
+        # Allow one concurrent deployment
+        concurrency:
+          group: "pages"
+          cancel-in-progress: true
 
         # Deploy to the github-pages environment
         environment:
@@ -67,6 +53,27 @@ jobs:
         
         if: github.ref == 'refs/heads/main'
         steps:
+            - name: Build documentation ⚙️     
+              run: |
+                set -o pipefail && env NSUnbufferedIO=YES \
+                  xcodebuild docbuild \
+                    -derivedDataPath /tmp/doccgen \
+                    -scheme "CoreUIKit" \
+                    -destination 'generic/platform=iOS'    
+        
+            - name: Generate documentation 🛠️ 📄     
+              run: |
+                set -o pipefail && env NSUnbufferedIO=YES \
+                  $(xcrun --find docc) process-archive \
+                    transform-for-static-hosting /tmp/doccgen/Build/Products/Debug-iphonesimulator/CoreUIKit.doccarchive \
+                    --output-path docs \
+                    --hosting-base-path CoreUIKit
+
+            - name: Upload Docs to doc folder 🗂️
+              uses: actions/upload-pages-artifact@v1
+              with:
+                path: 'docs'
+            
             - name: Deploy docs to GitHub Pages 🚀
               id: deployment
               uses: actions/deploy-pages@v1
