@@ -20,6 +20,10 @@ public enum RelatableAnchor {
     case top(_ relatingView: UIView, _ relatingAnchor: AnchorY = .top, _ relation: ConstraintRelation = .equal, margin: CGFloat = .zero)
     /// Bottom anchor with relating anchor and data
     case bottom(_ relatingView: UIView, _ relatingAnchor: AnchorY = .bottom, _ relation: ConstraintRelation = .equal, margin: CGFloat = .zero)
+    /// Center on x axis anchor with relating anchor and data
+    case centerX(_ relatingView: UIView, _ relatingAnchor: AnchorX = .centerX, margin: CGFloat = .zero)
+    /// Center on y axis anchor with relating anchor and data
+    case centerY(_ relatingView: UIView, _ relatingAnchor: AnchorY = .centerY, margin: CGFloat = .zero)
     /// Width anchor with relating anchor and data
     case width(relation: ConstraintRelation = .equal, _ value: CGFloat)
     /// Height anchor with relating anchor and data

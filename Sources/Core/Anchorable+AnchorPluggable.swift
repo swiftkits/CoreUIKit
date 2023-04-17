@@ -32,6 +32,12 @@ public extension Anchorable {
                 self.bottom(with: self.getAnchor(for: relatingView, with: relatingAnchor),
                              relation: relation,
                              margin: margin)
+            case .centerX(let relatingView, let relatingAnchor, margin: let margin):
+                self.centerX(with: self.getAnchor(for: relatingView, with: relatingAnchor),
+                             margin: margin)
+            case .centerY(let relatingView, let relatingAnchor, margin: let margin):
+                self.centerY(with: self.getAnchor(for: relatingView, with: relatingAnchor),
+                             margin: margin)
             case .width(let relation, let value):
                 self.width(value: value, relation: relation)
             case .height(let relation, let value):
@@ -52,6 +58,8 @@ extension Anchorable {
             return view.leadingAnchor
         case .trailing:
             return view.trailingAnchor
+        case .centerX:
+            return view.centerXAnchor
         }
     }
     
@@ -61,6 +69,8 @@ extension Anchorable {
             return view.topAnchor
         case .bottom:
             return view.bottomAnchor
+        case .centerY:
+            return view.centerYAnchor
         }
     }
     
