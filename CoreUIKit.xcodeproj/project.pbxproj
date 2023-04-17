@@ -25,6 +25,7 @@
 		13ECCC0F271AA7A6000DAD01 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC0E271AA7A6000DAD01 /* BaseCollectionView.swift */; };
 		13ECCC11271AA9AB000DAD01 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECCC10271AA9AB000DAD01 /* BaseCollectionViewCell.swift */; };
 		13ED670B26F713B6008F2DE4 /* TestBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */; };
+		A143CECD29EC59980004B74B /* Tutorials.docc in Sources */ = {isa = PBXBuildFile; fileRef = A143CECC29EC59980004B74B /* Tutorials.docc */; };
 		A1BD283929EAD947007D9FC2 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD283829EAD947007D9FC2 /* Anchor.swift */; };
 		A1BD283C29EADD66007D9FC2 /* NSLayoutXAxisAnchor+ConstraintRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD283A29EADD66007D9FC2 /* NSLayoutXAxisAnchor+ConstraintRelatable.swift */; };
 		A1BD283D29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD283B29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift */; };
@@ -71,6 +72,7 @@
 		13ECCC0E271AA7A6000DAD01 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		13ECCC10271AA9AB000DAD01 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaseTableView.swift; sourceTree = "<group>"; };
+		A143CECC29EC59980004B74B /* Tutorials.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Tutorials.docc; sourceTree = "<group>"; };
 		A1BD283829EAD947007D9FC2 /* Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
 		A1BD283A29EADD66007D9FC2 /* NSLayoutXAxisAnchor+ConstraintRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutXAxisAnchor+ConstraintRelatable.swift"; sourceTree = "<group>"; };
 		A1BD283B29EADD66007D9FC2 /* NSLayoutYAxisAnchor+ConstraintRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutYAxisAnchor+ConstraintRelatable.swift"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		139E08F326E13BB900A72A24 = {
 			isa = PBXGroup;
 			children = (
+				A143CECC29EC59980004B74B /* Tutorials.docc */,
 				139E08FF26E13BB900A72A24 /* Sources */,
 				139E090A26E13BB900A72A24 /* Tests */,
 				139E08FE26E13BB900A72A24 /* Products */,
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A143CECD29EC59980004B74B /* Tutorials.docc in Sources */,
 				1368BF4A271BDE1000EA7595 /* Anchorable.swift in Sources */,
 				139E092E26E1404500A72A24 /* BaseTableView.swift in Sources */,
 				A1BD283F29EADDDD007D9FC2 /* NSLayoutDimension+DimensionRelatable.swift in Sources */,

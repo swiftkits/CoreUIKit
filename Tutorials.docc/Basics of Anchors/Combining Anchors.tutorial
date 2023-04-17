@@ -1,0 +1,49 @@
+@Tutorial(time: 5) {
+    @Intro(title: "Combining Anchors") {
+        Combination of anchors are used to create combination of constraints, which is used to position views systematically on Screen.
+        
+        @Image(source: "Anchors-Large", alt: "Image describing list of anchors")
+    }
+    
+    @Section(title: "Create combination of Anchors") {
+        @ContentAndMedia {
+            As we have learned in the previous tutorial, there are 8 anchors accosiated with any view. Which we can combine to create a systematic link for position.
+            
+            @Image(source: "Combination of Anchors", alt: "Image describing usage of combination of anchors.")
+        }
+        
+        @Steps {
+            @Step {
+                Add leading anchor
+                
+                @Code(name: "MyCustomView.swift", file: LeadingAnchorDemo.swift) {
+                    @Image(source: "Combination of Anchors - Leading", alt: "Image describing usage of Leading anchor.")
+                }
+            }
+            
+            @Step {
+                Add top anchor
+                
+                @Code(name: "MyCustomView.swift", file: CombineLeadingTopAnchorDemo.swift) {
+                    @Image(source: "Combination of Anchors - Leading and Top", alt: "Image describing usage of Leading and Top anchors.")
+                }
+            }
+            
+            @Step {
+                Add width anchor
+                
+                @Code(name: "MyCustomView.swift", file: CombineLeadingTopWidthAnchorDemo.swift) {
+                    @Image(source: "Combination of Anchors - Leading Top and Width", alt: "Image describing usage of Leading, Top and Width anchors.")
+                }
+            }
+            
+            @Step {
+                Add height anchor
+                
+                @Code(name: "MyCustomView.swift", file: CombineAllAnchorsDemo.swift) {
+                    @Image(source: "Combination of Anchors - All anchors", alt: "Image describing usage of Leading, Top Width and Height anchors.")
+                }
+            }
+        }
+    }
+}
