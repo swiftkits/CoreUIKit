@@ -10,7 +10,7 @@
         
         @Image(source: "Setups", alt: "Image describing installation guides")
         
-        @TutorialReference(tutorial: "doc:Setup CoreUIKit framework")
+        @TutorialReference(tutorial: "doc:SetupCoreUIKitFramework")
     }    
     
     @Chapter(name: "Basics of Anchors") {
@@ -18,8 +18,8 @@
         
         @Image(source: "Anchors", alt: "Image describing usage of anchors on a view.")
         
-        @TutorialReference(tutorial: "doc:Introduction to Anchors")
-        @TutorialReference(tutorial: "doc:Combining Anchors")
+        @TutorialReference(tutorial: "doc:IntroductionToAnchors")
+        @TutorialReference(tutorial: "doc:CombiningAnchors")
     }
     
     @Chapter(name: "Basics of Constraints") {
@@ -27,8 +27,8 @@
         
         @Image(source: "Constraints", alt: "Image describing usage of anchors on multiple views.")
         
-        @TutorialReference(tutorial: "doc:Introduction to Constraint")
-        @TutorialReference(tutorial: "doc:Combining Constraints")
+        @TutorialReference(tutorial: "doc:IntroductionToConstraint")
+        @TutorialReference(tutorial: "doc:CombiningConstraints")
     }
     
     @Chapter(name: "Begines the Magic of Anchors and Constraints - CoreUIKit") {

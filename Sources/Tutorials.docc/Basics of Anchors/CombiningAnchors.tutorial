@@ -9,7 +9,7 @@
         @ContentAndMedia {
             As we have learned in the previous tutorial, there are 8 anchors accosiated with any view. Which we can combine to create a systematic link for position.
             
-            @Image(source: "Combination of Anchors", alt: "Image describing usage of combination of anchors.")
+            @Image(source: "CombinationOfAnchors", alt: "Image describing usage of combination of anchors.")
         }
         
         @Steps {
@@ -17,7 +17,7 @@
                 Add leading anchor
                 
                 @Code(name: "MyCustomView.swift", file: LeadingAnchorDemo.swift) {
-                    @Image(source: "Combination of Anchors - Leading", alt: "Image describing usage of Leading anchor.")
+                    @Image(source: "CombinationOfAnchors-Leading", alt: "Image describing usage of Leading anchor.")
                 }
             }
             
@@ -25,7 +25,7 @@
                 Add top anchor
                 
                 @Code(name: "MyCustomView.swift", file: CombineLeadingTopAnchorDemo.swift) {
-                    @Image(source: "Combination of Anchors - Leading and Top", alt: "Image describing usage of Leading and Top anchors.")
+                    @Image(source: "CombinationOfAnchors-LeadingAndTop", alt: "Image describing usage of Leading and Top anchors.")
                 }
             }
             
@@ -33,7 +33,7 @@
                 Add width anchor
                 
                 @Code(name: "MyCustomView.swift", file: CombineLeadingTopWidthAnchorDemo.swift) {
-                    @Image(source: "Combination of Anchors - Leading Top and Width", alt: "Image describing usage of Leading, Top and Width anchors.")
+                    @Image(source: "CombinationOfAnchors-LeadingTopAndWidth", alt: "Image describing usage of Leading, Top and Width anchors.")
                 }
             }
             
@@ -41,7 +41,7 @@
                 Add height anchor
                 
                 @Code(name: "MyCustomView.swift", file: CombineAllAnchorsDemo.swift) {
-                    @Image(source: "Combination of Anchors - All anchors", alt: "Image describing usage of Leading, Top Width and Height anchors.")
+                    @Image(source: "CombinationOfAnchors-AllAnchors", alt: "Image describing usage of Leading, Top Width and Height anchors.")
                 }
             }
         }

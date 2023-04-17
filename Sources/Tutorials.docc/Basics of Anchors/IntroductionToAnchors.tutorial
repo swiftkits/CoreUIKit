@@ -11,7 +11,7 @@
     
     @Section(title: "Types of Anchors") {
         @ContentAndMedia {
-            @Image(source: "Type of Anchors", alt: "Image describing types of anchors.")
+            @Image(source: "TypeOfAnchors", alt: "Image describing types of anchors.")
             
             |   Name       |   Description                          |
             |--------------|----------------------------------------|
@@ -48,7 +48,7 @@
                 Using leading anchor
                 
                 @Code(name: "MyCustomView.swift", file: LeadingAnchorDemo.swift) {
-                    @Image(source: "Leading Anchor", alt: "Previews leading anchor usage")
+                    @Image(source: "LeadingAnchor", alt: "Previews leading anchor usage")
                 }
             }
             
@@ -56,7 +56,7 @@
                 Using trailing anchor
                 
                 @Code(name: "MyCustomView.swift", file: TrailingAnchorDemo.swift) {
-                    @Image(source: "Trailing Anchor", alt: "Previews trailing anchor usage")
+                    @Image(source: "TrailingAnchor", alt: "Previews trailing anchor usage")
                 }
             }
             
@@ -64,7 +64,7 @@
                 Using top anchor
                 
                 @Code(name: "MyCustomView.swift", file: TopAnchorDemo.swift) {
-                    @Image(source: "Top Anchor", alt: "Previews top anchor usage")
+                    @Image(source: "TopAnchor", alt: "Previews top anchor usage")
                 }
             }
             
@@ -72,7 +72,7 @@
                 Using bottom anchor
                 
                 @Code(name: "MyCustomView.swift", file: BottomAnchorDemo.swift) {
-                    @Image(source: "Bottom Anchor", alt: "Previews bottom anchor usage")
+                    @Image(source: "BottomAnchor", alt: "Previews bottom anchor usage")
                 }
             }
             
@@ -80,7 +80,7 @@
                 Using width anchor
                 
                 @Code(name: "MyCustomView.swift", file: WidthAnchorDemo.swift) {
-                    @Image(source: "Width Anchor", alt: "Previews width anchor usage")
+                    @Image(source: "WidthAnchor", alt: "Previews width anchor usage")
                 }
             }
             
@@ -88,7 +88,7 @@
                 Using height anchor
                 
                 @Code(name: "MyCustomView.swift", file: HeightAnchorDemo.swift) {
-                    @Image(source: "Height Anchor", alt: "Previews height anchor usage")
+                    @Image(source: "HeightAnchor", alt: "Previews height anchor usage")
                 }
             }
             
@@ -96,7 +96,7 @@
                 Using centerX anchor
                 
                 @Code(name: "MyCustomView.swift", file: CenterXAnchorDemo.swift) {
-                    @Image(source: "CenterX Anchor", alt: "Previews center x anchor usage")
+                    @Image(source: "CenterXAnchor", alt: "Previews center x anchor usage")
                 }
             }
             
@@ -104,7 +104,7 @@
                 Using centerY anchor
                 
                 @Code(name: "MyCustomView.swift", file: CenterYAnchorDemo.swift) {
-                    @Image(source: "CenterY Anchor", alt: "Previews center y anchor usage")
+                    @Image(source: "CenterYAnchor", alt: "Previews center y anchor usage")
                 }
             }
         }
