@@ -11,7 +11,7 @@
     
     @Section(title: "Types of Anchors") {
         @ContentAndMedia {
-            @Image(source: "Type of Anchors", alt: "Image describing types of anchors.")
+            @Image(source: "TypeOfAnchors", alt: "Image describing types of anchors.")
             
             |   Name       |   Description                          |
             |--------------|----------------------------------------|
