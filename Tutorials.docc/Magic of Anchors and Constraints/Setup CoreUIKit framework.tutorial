@@ -1,28 +1,44 @@
 @Tutorial(time: 5) {
     @Intro(title: "Setup CoreUIKit framework") {
-        <#text#>
-        
-        @Image(source: <#file#>, alt: "<#accessible description#>")
+        It's very easy to setup CoreUIKit, using Cocoapods, Swift package manager or Carthage.
     }
     
-    @Section(title: "<#text#>") {
+    @Section(title: "Install") {
         @ContentAndMedia {
-            <#text#>
+            > For latest releases checkout our [releases section](https://github.com/swiftkits/CoreUIKit/releases).
+            > For updates in installation guide, check out [this doc](https://github.com/swiftkits/CoreUIKit/releases)
             
-            @Image(source: <#file#>, alt: "<#accessible description#>")
+            For most cases, eveything mentioned here should stay the same.
+            
+            @Image(source: "Setups", alt: "Image describing installation guides")
         }
         
         @Steps {
             @Step {
-                <#text#>
+                **Install using cocoapods**.
+                Create a podfile in the root folder of your project and copy paste the code from the right side and save and run  
                 
-                @Image(source: <#file#>, alt: "<#accessible description#>")
+                `pod install`
+                
+                @Code(name: "MyProject.podfile", file: InstallPod.podfile)
             }
             
             @Step {
-                <#text#>
+                **Install using carthage**.
+                Create a [Cartfile](https://github.com/Carthage/Carthage) in the same folder, where your project and workspace files are, after that copy and paste the code from the right side, save and run  
                 
-                @Code(name: "<#display name#>", file: <#filename.swift#>)
+                `carthage update --use-xcframeworks`
+                
+                @Code(name: "Cartfile", file: InstallCarthage)
+            }
+            
+            @Step {
+                **Install using Swift package manager**.
+                To install a Swift package from xcode, [follow this link](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app). In the search bar you can either enter any one of the following  
+                
+                `CoreUIKit` or enter repo link https://github.com/swiftkits/CoreUIKit.git
+                
+                @Image(source: "SPM-Install", alt: "Image describing spm install.")
             }
         }
     }
