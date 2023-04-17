@@ -14,6 +14,8 @@ public enum AnchorX: String {
     case leading
     /// Trailing Anchor
     case trailing
+    /// Center on x-axis
+    case centerX
 }
 
 /// Type of the Anchors used to create constraint/relations on Y Axis
@@ -22,6 +24,8 @@ public enum AnchorY: String {
     case top
     /// Bottom Anchor
     case bottom
+    /// Center on y-axis
+    case centerY
 }
 
 /// Type of the Anchors used to create constraint/relations with diemention

@@ -1,0 +1,47 @@
+@Tutorial(time: 15) {
+    @Intro(title: "Debugging") {
+        `CoreUIKit` provides very useful methods to construct identifiable constraints, which helps during debugging the UI related issues.
+    }
+    
+    @Section(title: "Setup UI for Debugging") {
+        @ContentAndMedia {
+            It's very easy, all you need is, `view.set(identifier:)` funcation call with view id. After this, `CoreUIKit` will autometically keep labeling your newly added constraints related to that view.  
+            
+            > Call `view.set(identifier:)` before setting any constraint on that view.
+            
+            @Image(source: "Debugging", alt: "Image showing view debugger.")
+        }
+        
+        @Steps {
+            @Step {
+                We will be using Example project, which has username and password fields and labels setup. You can check the view setups and entier code using [this link](https://github.com/swiftkits/CoreUIKit/blob/main/Examples/ExampleSources/ViewController.swift).  
+                
+                Also, I would suggest you to run the example project locally on your system and follow the exact same steps as mentioned here.
+                
+                @Image(source: "ExampleApp", alt: "Image describing a view with constraints")
+            }
+            
+            @Step {
+                Tap on the view debugger (located at the bottom of Xcode) option.
+                
+                @Image(source: "ViewDebugger-Option", alt: "Image pointing to view debugger.")
+            }
+            
+            @Step {
+                Now expand the left pan and tap on the `Debug Navigator`. It'll show the entier list of view hierarchy.  
+                
+                Select and Expand the `UILabel-Username` Label and you will see a list of constraints appear with nice labeles.
+                
+                @Image(source: "Debug-Constraints", alt: "Image pointing to list of view hierarchy.")
+            }
+            
+            @Step {
+                Now expand the right pan and tap on the `Size inspector`. Select any custom added View from `Debug Navigation`.  
+                
+                You will see a list of constraints releted to selcted view, appear with nice labeles.
+                
+                @Image(source: "Debug-Constraints-Frames", alt: "Image pointing to list of constraints.")
+            }
+        }
+    }
+}

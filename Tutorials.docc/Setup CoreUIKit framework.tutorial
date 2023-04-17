@@ -1,0 +1,45 @@
+@Tutorial(time: 5) {
+    @Intro(title: "Setup CoreUIKit framework") {
+        It's very easy to setup CoreUIKit, using Cocoapods, Swift package manager or Carthage.
+    }
+    
+    @Section(title: "Install") {
+        @ContentAndMedia {
+            > For latest releases checkout our [releases section](https://github.com/swiftkits/CoreUIKit/releases).
+            > For updates in installation guide, check out [this doc](https://github.com/swiftkits/CoreUIKit/releases)
+            
+            For most cases, eveything mentioned here should stay the same.
+            
+            @Image(source: "Setups", alt: "Image describing installation guides")
+        }
+        
+        @Steps {
+            @Step {
+                **Install using cocoapods**.
+                Create a podfile in the root folder of your project and copy paste the code from the right side and save and run  
+                
+                `pod install`
+                
+                @Code(name: "MyProject.podfile", file: InstallPod.podfile)
+            }
+            
+            @Step {
+                **Install using carthage**.
+                Create a [Cartfile](https://github.com/Carthage/Carthage) in the same folder, where your project and workspace files are, after that copy and paste the code from the right side, save and run  
+                
+                `carthage update --use-xcframeworks`
+                
+                @Code(name: "Cartfile", file: InstallCarthage)
+            }
+            
+            @Step {
+                **Install using Swift package manager**.
+                To install a Swift package from xcode, [follow this link](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app). In the search bar you can either enter any one of the following  
+                
+                `CoreUIKit` or enter repo link https://github.com/swiftkits/CoreUIKit.git
+                
+                @Image(source: "SPM-Install", alt: "Image describing spm install.")
+            }
+        }
+    }
+}

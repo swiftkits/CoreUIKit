@@ -8,6 +8,7 @@
 import UIKit
 
 
+/// A mechanism to plug a given view into any other using relative anchors and margins
 public protocol AnchorPluggable {
     
     /// Plugs in the provided anchors with thier relation to the view

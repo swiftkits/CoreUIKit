@@ -1,0 +1,41 @@
+@Tutorial(time: 20) {
+    @Intro(title: "Combining Constraints") {
+        We can create complex ui by combining multiple constrains. 
+        
+        @Image(source: "Constraints-Large", alt: "Image describing usage of combination of constraints.")
+    }
+    
+    @Section(title: "Creating complex UI") {
+        @ContentAndMedia {
+            There are few vertical and horizontal views in this screen, we can group them to separate the logic. Like first three vertical views can be combined togather in a `UIStackView` to present them with equal size and after that we can position the right most view with custom constraints. Enough talking let's code!' 
+            
+            @Image(source: "Constraints-Combined", alt: "Image describing usage of combination of constraints.")
+        }
+        
+        @Steps {
+            @Step {
+                Create a vertical `UIStackView` with euqally filled and spaced subviews, height will be same as it's superview's height. Add leading constraint pointing to superview's leading anchor with 20 margin from left, add top constraint pointing to superview's top anchor with margin 20 from top, add bottom constraint pointing to superview's bottom anchor with margin 20 from bottom, finally add width constraint with 200 as it's diemention. 
+                
+                @Code(name: "MyCustomViewController.swift", file: CombineConstraints-StackDemo.swift) {
+                    @Image(source: "Constraints-StackAnchor", alt: "Image describing usage of combination of constraints.")
+                }
+            }
+            
+            @Step {
+                Now let's create and add three stacked views in to our newly created stackview. Create three views with background color of your choice and add it to the `customStackView`.
+                
+                @Code(name: "MyCustomViewController.swift", file: CombinedConstraints-AddStackedViews.swift) {
+                    @Image(source: "Constraints-AddedStackedViews", alt: "Image describing usage of combination of constraints.")
+                }
+            }
+            
+            @Step {
+                Finally add the right most view with leading constraint pointing to trailing anchor of `customStackView` with 20 margin from it's leading, add top constraint pointing to the top anchor of the superview with margin value of 20 from the top, finally add bottom and trailing constraints pointing to the superview's bottom and trailing anchor with margin value of 20 respectively. These constraints will allow this view to cover the remaining area on the screen.   
+                
+                @Code(name: "MyCustomViewController.swift", file: CombinedConstraints-AddRightView.swift) {
+                    @Image(source: "Constraints-Combined", alt: "Image describing usage of combination of constraints.")
+                }
+            }
+        }
+    }
+}

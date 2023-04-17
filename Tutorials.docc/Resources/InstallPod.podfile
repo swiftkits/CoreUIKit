@@ -1,0 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+target 'MyApp' do
+  pod 'CoreUIKit', '0.3.4'
+end
