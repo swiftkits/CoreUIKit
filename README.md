@@ -13,6 +13,7 @@
     - [Install using Cocoapods](#cocoapods)
     - [Install using Swift package manager](#swift-package-manager)
     - [Install using Carthage](#carthage)
+- [Tutorials](https://swiftkits.github.io/CoreUIKit/tutorials/tableofcontents)
 - [Documentation](#documentation)
 - [Examples](#examples)
 - [Learn](#learn)
