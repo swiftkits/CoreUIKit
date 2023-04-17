@@ -127,7 +127,6 @@
 		139E08F326E13BB900A72A24 = {
 			isa = PBXGroup;
 			children = (
-				A143CECC29EC59980004B74B /* Tutorials.docc */,
 				139E08FF26E13BB900A72A24 /* Sources */,
 				139E090A26E13BB900A72A24 /* Tests */,
 				139E08FE26E13BB900A72A24 /* Products */,
@@ -146,6 +145,7 @@
 		139E08FF26E13BB900A72A24 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A143CECC29EC59980004B74B /* Tutorials.docc */,
 				13ECCC01271A7FF1000DAD01 /* Core */,
 				134E17A426E29C1B0057F70C /* Extensions */,
 				139E093126E142B600A72A24 /* BaseView */,
