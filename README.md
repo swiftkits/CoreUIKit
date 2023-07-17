@@ -17,6 +17,7 @@
 - [Documentation](#documentation)
 - [Examples](#examples)
 - [Learn](#learn)
+- [Author](#author)
 
 ## Installation
 
@@ -85,3 +86,6 @@ Following are the useful links for learning about autolayout.
     - [Mysteries of Auto Layout, Part 1](https://developer.apple.com/videos/play/wwdc2015/218)
     - [Mysteries of Auto Layout, Part 2](https://developer.apple.com/videos/play/wwdc2015/219)
     - [High Performance Auto Layout](https://developer.apple.com/videos/play/wwdc2018/220/)
+
+## Author
+Written By Manish Pandey.
